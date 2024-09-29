@@ -1,29 +1,29 @@
 <h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
 <p align="center">Khulika Malkan</p>
 
-## Dasar Teori
+# Dasar Teori
 
 Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
 
-## Guided 
+# Guided 
 
-### 1. [Nama Topik]
+## 1. [Nama Topik]
 
 ```python
 print("ini adalah file code guided praktikan")
 ```
 Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function print untuk mengeksekusi nya.
 
-## Unguided 
+# Unguided 
 
-### 1. Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya dan Jumlah angka pada setiap baris bertambah 1, dan bilangan yang ditampilkan adalah bilangan prima.
+## 1. Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya dan Jumlah angka pada setiap baris bertambah 1, dan bilangan yang ditampilkan adalah bilangan prima.
 ```
 1
 2 3
 5 7 11
 13 17 19 23
 ```
-#### Kode Program:
+### Kode Program:
 ```python
 # Fungsi untuk memeriksa apakah suatu bilangan adalah prima
 def is_prime(num):
@@ -57,10 +57,10 @@ def print_prime_pattern(limit):
 # Menjalankan program hingga bilangan prima 23
 print_prime_pattern(5)
 ```
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/25eefb8f-e30e-4703-9eb0-85a757580bdf)
 
-#### Penjelasan:
+### Penjelasan:
 Kode di atas menggunakan fungsi is_prime(num) untuk mengecek apakah bilangan adalah bilangan prima
 - Tujuan Fungsi: Fungsi ini digunakan untuk memeriksa apakah suatu bilangan num merupakan bilangan prima atau tidak.
 - Langkah-langkah:
@@ -69,8 +69,8 @@ Kode di atas menggunakan fungsi is_prime(num) untuk mengecek apakah bilangan ada
 - Baris if num % i == 0:: Jika ada angka i yang membagi num secara sempurna (tanpa sisa), maka bilangan tersebut bukan bilangan prima, sehingga dikembalikan False.
 - Baris return True:: Jika tidak ada angka yang dapat membagi num, bilangan tersebut adalah bilangan prima, maka fungsi mengembalikan True.
 
-### 2. Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. List baru tersebut juga harus diurutkan secara menurun berdasarkan nilai elemen.
-#### kode program:
+## 2. Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. List baru tersebut juga harus diurutkan secara menurun berdasarkan nilai elemen.
+### kode program:
 ```python
 def ambil_ganjil_dan_urutkan(list1, list2):  
     # Ambil elemen dengan indeks ganjil dari list1 dan list2
@@ -92,10 +92,10 @@ list2 = [11, 22, 33, 44, 55, 66]
 hasil = ambil_ganjil_dan_urutkan(list1, list2)
 print(hasil)
 ```
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/883b1867-a66f-41ea-ae5a-fec3aad6358b)
 
-#### penjelasan:
+### penjelasan:
 kode ini membuat Fungsi: ambil_ganjil_dan_urutkan(list1, list2)
 Fungsi ini memiliki dua daftar input, list1 dan list2. Tugas dari fungsi ini adalah:
 - Mengambil elemen-elemen yang berada di indeks ganjil dari kedua daftar.
@@ -103,12 +103,12 @@ Fungsi ini memiliki dua daftar input, list1 dan list2. Tugas dari fungsi ini ada
 - Mengurutkan hasil gabungan tadi secara menurun (dari yang terbesar ke yang terkecil).
 - Mengembalikan hasil akhir berupa daftar elemen yang sudah diurutkan.
 
-### 3. Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus: 
+## 3. Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus: 
 1. Meminta pengguna memasukkan PIN (dibatasi 3 kali percobaan).
 2. Setelah PIN benar, meminta jumlah penarikan.
 3. Jika saldo kurang dari jumlah yang ditarik, munculkan pesan kesalahan.
 4. Jika penarikan berhasil, tampilkan saldo akhir.
-#### kode program:
+### kode program:
 ```python
 # Simulasi ATM dengan penanganan PIN dan saldo
 def atm_simulasi():
@@ -151,11 +151,11 @@ def atm_simulasi():
 # Menjalankan simulasi ATM
 atm_simulasi()
 ```
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/67226bb9-41c6-4224-8bef-a128658392b0)
 
 
-#### Penjelasan:
+### Penjelasan:
 1. Proses input PIN
 - Looping PIN: Program akan meminta pengguna untuk memasukkan PIN hingga PIN yang dimasukkan benar atau hingga kesempatan habis.
 - Jika PIN yang dimasukkan benar, program akan menampilkan pesan "PIN benar" dan keluar dari proses ini.
@@ -173,12 +173,12 @@ atm_simulasi()
 - Pengguna diminta untuk memasukkan PIN : Jika PIN benar, pengguna bisa lanjut ke proses penarikan dan Jika PIN salah 3 kali berturut-turut, akun diblokir, dan program berhenti.
 - Setelah PIN benar, pengguna diminta memasukkan jumlah uang yang ingin ditarik: Jika penarikan lebih besar dari saldo, program menolak dan meminta input yang lebih kecil dan Jika penarikan valid, penarikan dilakukan dan sisa saldo ditampilkan.
 
-### 4. Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis sebuah program yang:
+## 4. Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis sebuah program yang:
 1. Membaca file CSV dan menyimpan datanya ke dalam dictionary.
 2. Menghitung rata-rata nilai tiap mahasiswa.
 3. Menampilkan mahasiswa dengan nilai tertinggi dan terendah.
    
-#### Kode Program:
+### Kode Program:
 ```python
 import pandas as pd
 data = pd.read_csv('siswa_nilai.csv')
@@ -192,11 +192,11 @@ print(f"Mahasiswa dengan nilai rata-rata terendah: {nilai_terendah} ")
 ```
 
 
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/7933dd27-8fd2-4b88-a7a0-019f51d9a51c)
 
 
-#### Penjelasan:
+### Penjelasan:
 csv adalah modul Python yang digunakan untuk membaca dan menulis file CSV (Comma-Separated Values). Dalam kode ini, modul ini digunakan untuk membaca data dari file CSV yang berisi data nilai mahasiswa.
 - Membuka file CSV dengan mode baca ('r').
 - Menggunakan csv.reader untuk membaca baris-baris data dari file.
@@ -214,8 +214,8 @@ csv adalah modul Python yang digunakan untuk membaca dan menulis file CSV (Comma
 - Program kemudian menampilkan rata-rata nilai setiap mahasiswa.
 - Fungsi cari_nilai_tertinggi_terendah() dipanggil untuk menemukan mahasiswa dengan nilai rata-rata tertinggi dan terendah, lalu hasilnya ditampilkan.
 
-### 5. Buatlah permainan sederhana menggunakan Python, di mana komputer akan memilih sebuah angka secara acak antara 1 hingga 100, dan pengguna harus menebak angka tersebut. Setiap tebakan yang salah akan memberikan petunjuk apakah angka yang ditebak lebih besar atau lebih kecil dari angka sebenarnya. Batasi jumlah percobaan menjadi 5 kali. Setelah permainan selesai, tampilkan apakah pemain menang atau kalah.
-#### Kode Program:
+## 5. Buatlah permainan sederhana menggunakan Python, di mana komputer akan memilih sebuah angka secara acak antara 1 hingga 100, dan pengguna harus menebak angka tersebut. Setiap tebakan yang salah akan memberikan petunjuk apakah angka yang ditebak lebih besar atau lebih kecil dari angka sebenarnya. Batasi jumlah percobaan menjadi 5 kali. Setelah permainan selesai, tampilkan apakah pemain menang atau kalah.
+### Kode Program:
 ```python
 # import modul untuk menyediakan fungsi yang menghasilkan angka acak
 import random
@@ -258,10 +258,10 @@ def tebak_angka():
 # Menjalankan permainan/memanggil fungsi tebak_angka() untuk memulai
 tebak_angka()
 ```
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/1b9c0728-b783-4fa3-9648-e915636b666e)
 
-#### Penjelasan:
+### Penjelasan:
 random adalah modul yang menyediakan fungsi untuk menghasilkan angka acak. Di sini, digunakan untuk memilih angka rahasia yang harus ditebak oleh pengguna.
 1.	Proses menebak angka
 - Looping Percobaan: Program menggunakan for loop untuk memberi pengguna 5 kesempatan. Setiap loop mewakili satu percobaan.
@@ -279,13 +279,13 @@ random adalah modul yang menyediakan fungsi untuk menghasilkan angka acak. Di si
 - Pengguna menebak lagi, misalnya 60: Program memberi tahu bahwa tebakan terlalu besar.
 - Pengguna menebak angka 55 : Program memberi tahu bahwa tebakan benar, dan pengguna menang dan Jika pengguna tidak berhasil menebak dalam 5 percobaan, program akan memberi tahu angka yang benar.
 
-### 6. Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
+## 6. Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
 ```
 Input: n = 4
 Output: 1, 1, 2, 6, 24
 ```
 Dan Fungsi ini harus menggunakan konsep rekursi untuk menghitung faktorial setiap angka hingga `n`.
-#### Kode Program:
+### Kode Program:
 ```python
 # Fungsi rekursif untuk menghitung faktorial dari bilangan n
 def faktorial(n):
@@ -308,10 +308,10 @@ n = 4
 hasil = deret_faktorial(n)
 print("Output:", ", ".join(map(str, hasil)))
 ```
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/e4c34982-3a73-4d55-a1d4-9aeb385c46d1)
 
-#### Penjelasan:
+### Penjelasan:
 Dalam kode program ini ada dua fungsi utama:
 1.	Fungsi faktorial(n): Menghitung faktorial dari suatu bilangan menggunakan rekursi.
 2.	Fungsi deret_faktorial(n): Menghasilkan deret faktorial dari 0 hingga n menggunakan rekursi, dengan memanfaatkan fungsi faktorial().
@@ -345,7 +345,7 @@ Contoh untuk menghasilkan deret faktorial dari 0 hingga 4: deret_faktorial(4):
 - Program menghasilkan output deret faktorial dari 0 hingga 4
 
 
-### 7. Buatlah program untuk memecahkan masalah "minimum coin change". Diberikan jumlah uang dan daftar nilai koin yang tersedia (misalnya, 1, 5, 10, 25), tentukan kombinasi minimum koin yang diperlukan untuk mencapai jumlah uang tersebut. Namun, program Anda harus bisa menangani koin-koin yang nilai dan jumlahnya ditentukan pengguna.
+## 7. Buatlah program untuk memecahkan masalah "minimum coin change". Diberikan jumlah uang dan daftar nilai koin yang tersedia (misalnya, 1, 5, 10, 25), tentukan kombinasi minimum koin yang diperlukan untuk mencapai jumlah uang tersebut. Namun, program Anda harus bisa menangani koin-koin yang nilai dan jumlahnya ditentukan pengguna.
 ```python
 def minimum_coin_change(total, koin_tersedia):
     # Mengurutkan koin dari yang terbesar ke terkecil
@@ -386,10 +386,10 @@ def main():
 # Menjalankan program
 main()
 ```
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/6cb3b3b0-b548-48ee-a8c4-51f6c95d1e86)
 
-#### Penjelasan:
+### Penjelasan:
 1.	Mengurutkan koin dari yang terbesar ke terkecil
 - Program mengurutkan nilai koin dari yang terbesar ke yang terkecil, karena dengan menggunakan koin yang lebih besar terlebih dahulu, kita bisa mengurangi jumlah koin yang dibutuhkan.
 - Misalnya, jika kita punya koin 25, 10, dan 1, maka lebih efisien menggunakan koin 25 dulu daripada menggunakan koin 1 atau 10.
@@ -420,12 +420,12 @@ Cara Kerja Program:
 3.	Jika jumlah uang bisa dicapai dengan kombinasi koin yang tersedia, program menampilkan kombinasi koin yang digunakan. Jika tidak bisa dicapai, program memberi tahu pengguna bahwa kombinasi koin tidak cukup.
 
 
-### 8. Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. Misalnya:
+## 8. Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. Misalnya:
 ```
 Input: "Saya suka Python"
 Output: ["ayaS", "akus", "nohtyP"]
 ```
-#### Kode Program:
+### Kode Program:
 ```python
 def balik_kata(string):
     # Memecah string menjadi list kata-kata
@@ -450,10 +450,10 @@ def main():
 # Menjalankan program
 main()
 ```
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/fb5c0440-29cf-40e7-b9be-b4c90134e863)
 
-#### Penjelaan:
+### Penjelaan:
 Fungsi balik_kata(string):
 1.	Memecah kalimat menjadi list kata-kata:
 - string.split() memisahkan kalimat berdasarkan spasi dan mengubahnya menjadi list yang berisi kata-kata. Misalnya, jika input kalimatnya adalah "Halo dunia", maka kata_list akan berisi ["Halo", "dunia"].
@@ -471,8 +471,8 @@ Penjelasan Fungsi main():
 3.	Menampilkan hasil:
 Program menampilkan hasil, yaitu list dari kata-kata yang sudah dibalik.
 
-### 9. Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku.
-#### Kode Progrram:
+## 9. Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku.
+### Kode Progrram:
 ```python
 from datetime import datetime
 
@@ -507,10 +507,10 @@ for buku in [buku1, buku2, buku3]:
     print(f"Usia Buku: {buku.usia_buku()} tahun")
     print("-" * 30)
 ```
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/da49032c-4435-457f-a55e-cef31ae28917)
 
-#### Penyelesaian:
+### Penyelesaian:
 1. Class Buku:
 - Class ini memiliki 3 atribut: judul, penulis, dan tahun_terbit.
 - Method tampilkan_info() digunakan untuk mencetak informasi buku (judul, penulis, dan tahun terbit).
@@ -522,7 +522,7 @@ for buku in [buku1, buku2, buku3]:
 - Informasi buku ditampilkan menggunakan method tampilkan_info().
 - Usia buku dihitung dan ditampilkan menggunakan method hitung_usia().
 
-### 10. Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
+## 10. Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
 #### Kode Program:
 ```python
 def binary_search_genap(arr, target):
@@ -572,10 +572,10 @@ def main():
 # Menjalankan program
 main()
 ```
-#### Output:
+### Output:
 ![image](https://github.com/user-attachments/assets/834c218a-ec72-43ee-8abf-d9e34ec00e02)
 
-#### Penyelesaian:
+### Penyelesaian:
 Penjelasan Kode:
 1. Fungsi binary_search_genap(arr, target):
 - Fungsi ini melakukan pencarian bilangan genap dengan metode binary search.Bagian ini memeriksa apakah bilangan yang dicari (target) adalah ganjil. Jika iya, maka fungsi langsung mengembalikan nilai -1 dan mengeluarkan pesan bahwa bilangan tersebut tidak bisa dicari, karena hanya bilangan genap yang akan dicari.
@@ -599,7 +599,7 @@ Penjelasan Kode:
 Program ini menggunakan algoritma binary search untuk mencari bilangan genap dalam list yang sudah diurutkan. Program juga menangani kasus ketika pengguna memasukkan bilangan ganjil atau input yang tidak valid.
 
 
-## Kesimpulan
+# Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
 
 ## Referensi
