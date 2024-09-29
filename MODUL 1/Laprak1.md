@@ -1,5 +1,7 @@
 <h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
 <p align="center">Khulika Malkan</p>
+<p align="center">2311110057</p>
+<p align="center">S1SD0-02</p>
 
 ## Dasar Teori
 Python  adalah  bahasa  pemrograman  yang  menggunakan  interpreter untuk     menjalankan     kode     programnya.     Interpreter     tersebut     dapat menerjemahkan  kode  secara  langsung,  dan  Python  dapat  dijalankan  di berbagai platform seperti Windows, Linux, dan lain-lain. Pythonmengadopsi paradigma  pemrograman  dari  beberapa  bahasa  lain,  termasuk  paradigma pemrograman  prosedural  seperti  bahasa  C,  pemrograman  berorientasi  objek seperti  Java,  dan  bahasa  fungsional  seperti  Lisp.  Kombinasi  paradigma  ini memudahkan  para  programmer  dalam  mengembangkan  berbagai  proyek menggunakan Python [1].
