@@ -23,7 +23,7 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 5 7 11
 13 17 19 23
 ```
-
+#### Kode Program:
 ```python
 # Fungsi untuk memeriksa apakah suatu bilangan adalah prima
 def is_prime(num):
