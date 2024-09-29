@@ -169,7 +169,7 @@ atm_simulasi()
 - Jika jumlah yang dimasukkan kurang dari atau sama dengan nol, program menolak dan meminta ulang input.
 - Jika jumlah yang diminta lebih besar dari saldo yang tersedia, program menampilkan pesan bahwa saldo tidak mencukupi dan meminta jumlah yang lebih kecil.
 - Jika jumlah yang diminta valid dan tidak melebihi saldo, maka saldo dikurangi dan penarikan berhasil. Sisa saldo ditampilkan, dan program berhenti.
-3.	Output
+3. Interpretasi Output:
 - Pengguna diminta untuk memasukkan PIN : Jika PIN benar, pengguna bisa lanjut ke proses penarikan dan Jika PIN salah 3 kali berturut-turut, akun diblokir, dan program berhenti.
 - Setelah PIN benar, pengguna diminta memasukkan jumlah uang yang ingin ditarik: Jika penarikan lebih besar dari saldo, program menolak dan meminta input yang lebih kecil dan Jika penarikan valid, penarikan dilakukan dan sisa saldo ditampilkan.
 
@@ -189,7 +189,6 @@ nilai_terendah = data ['Nilai'].min()
 print(f"rata-rata nilai siswa: {rata_rata}")
 print(f"\nMahasiswa dengan nilai rata-rata tertinggi: {nilai_tertinggi} ")
 print(f"Mahasiswa dengan nilai rata-rata terendah: {nilai_terendah} ")
-# Khulika Malkan (2311110057)
 ```
 #### Penjelasan:
 csv adalah modul Python yang digunakan untuk membaca dan menulis file CSV (Comma-Separated Values). Dalam kode ini, modul ini digunakan untuk membaca data dari file CSV yang berisi data nilai mahasiswa.
@@ -203,6 +202,8 @@ csv adalah modul Python yang digunakan untuk membaca dan menulis file CSV (Comma
 
 - proses Run Code
 - Fungsi main() bertugas untuk menjalankan program.
+
+
 - Langkah-langkah:
 - Nama file CSV yang akan dibaca ditentukan dalam variabel nama_file (misalnya data_nilai_mahasiswa.csv).
 - Fungsi baca_data_csv() dipanggil untuk membaca data mahasiswa dari file CSV.
