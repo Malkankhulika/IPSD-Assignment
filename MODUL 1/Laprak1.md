@@ -206,11 +206,8 @@ csv adalah modul Python yang digunakan untuk membaca dan menulis file CSV (Comma
 - Data ini kemudian dimasukkan ke dalam dictionary, di mana nama mahasiswa adalah kunci, dan nilai-nilai adalah daftar integer.
 - Mengembalikan dictionary data_mahasiswa.
 
-- proses Run Code
+1. proses Run Code
 - Fungsi main() bertugas untuk menjalankan program.
-
-
-- Langkah-langkah:
 - Nama file CSV yang akan dibaca ditentukan dalam variabel nama_file (misalnya data_nilai_mahasiswa.csv).
 - Fungsi baca_data_csv() dipanggil untuk membaca data mahasiswa dari file CSV.
 - Fungsi hitung_rata_rata() dipanggil untuk menghitung rata-rata nilai setiap mahasiswa.
