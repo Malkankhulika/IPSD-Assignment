@@ -173,6 +173,46 @@ atm_simulasi()
 - Pengguna diminta untuk memasukkan PIN : Jika PIN benar, pengguna bisa lanjut ke proses penarikan dan Jika PIN salah 3 kali berturut-turut, akun diblokir, dan program berhenti.
 - Setelah PIN benar, pengguna diminta memasukkan jumlah uang yang ingin ditarik: Jika penarikan lebih besar dari saldo, program menolak dan meminta input yang lebih kecil dan Jika penarikan valid, penarikan dilakukan dan sisa saldo ditampilkan.
 
+### 4. Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis sebuah program yang:
+1. Membaca file CSV dan menyimpan datanya ke dalam dictionary.
+2. Menghitung rata-rata nilai tiap mahasiswa.
+3. Menampilkan mahasiswa dengan nilai tertinggi dan terendah.
+   
+#### Kode Program:
+```python
+import pandas as pd
+data = pd.read_csv('siswa_nilai.csv')
+rata_rata = data ['Nilai'].mean()
+nilai_tertinggi = data ['Nilai'].max()
+nilai_terendah = data ['Nilai'].min()
+
+print(f"rata-rata nilai siswa: {rata_rata}")
+print(f"\nMahasiswa dengan nilai rata-rata tertinggi: {nilai_tertinggi} ")
+print(f"Mahasiswa dengan nilai rata-rata terendah: {nilai_terendah} ")
+# Khulika Malkan (2311110057)
+```
+#### Penjelasan:
+csv adalah modul Python yang digunakan untuk membaca dan menulis file CSV (Comma-Separated Values). Dalam kode ini, modul ini digunakan untuk membaca data dari file CSV yang berisi data nilai mahasiswa.
+- Membuka file CSV dengan mode baca ('r').
+- Menggunakan csv.reader untuk membaca baris-baris data dari file.
+- next(csv_reader): Digunakan untuk melewati baris pertama (header) dari file CSV.
+- Untuk setiap baris, nilai pada indeks pertama dianggap sebagai nama mahasiswa, dan nilai-nilai berikutnya dianggap sebagai nilai mata kuliah.
+- map(int, baris[1:]): Mengonversi semua nilai yang merupakan string dari file CSV menjadi integer.
+- Data ini kemudian dimasukkan ke dalam dictionary, di mana nama mahasiswa adalah kunci, dan nilai-nilai adalah daftar integer.
+- Mengembalikan dictionary data_mahasiswa.
+
+- proses Run Code
+- Fungsi main() bertugas untuk menjalankan program.
+- Langkah-langkah:
+- Nama file CSV yang akan dibaca ditentukan dalam variabel nama_file (misalnya data_nilai_mahasiswa.csv).
+- Fungsi baca_data_csv() dipanggil untuk membaca data mahasiswa dari file CSV.
+- Fungsi hitung_rata_rata() dipanggil untuk menghitung rata-rata nilai setiap mahasiswa.
+- Program kemudian menampilkan rata-rata nilai setiap mahasiswa.
+- Fungsi cari_nilai_tertinggi_terendah() dipanggil untuk menemukan mahasiswa dengan nilai rata-rata tertinggi dan terendah, lalu hasilnya ditampilkan.
+
+
+#### Output:
+
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
 
