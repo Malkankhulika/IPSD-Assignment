@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/893ba859-8995-476c-91ec-86188858584d)# <h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
+<h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
 <p align="center">Khulika Malkan</p>
 
 ## Dasar Teori
