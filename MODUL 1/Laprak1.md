@@ -2,8 +2,38 @@
 <p align="center">Khulika Malkan</p>
 
 ## Dasar Teori
+Python  adalah  bahasa  pemrograman  yang  menggunakan  interpreter untuk     menjalankan     kode     programnya.     Interpreter     tersebut     dapat menerjemahkan  kode  secara  langsung,  dan  Python  dapat  dijalankan  di berbagai platform seperti Windows, Linux, dan lain-lain. Pythonmengadopsi paradigma  pemrograman  dari  beberapa  bahasa  lain,  termasuk  paradigma pemrograman  prosedural  seperti  bahasa  C,  pemrograman  berorientasi  objek seperti  Java,  dan  bahasa  fungsional  seperti  Lisp.  Kombinasi  paradigma  ini memudahkan  para  programmer  dalam  mengembangkan  berbagai  proyek menggunakan Python [1].
+### Variabel dan Tipe Data
+Sebuah variabel dapat memiliki nama pendek (seperti x dan y) atau nama yang lebih deskriptif (umur, namalengkap, total_volume).
+Aturan untuk penulisanan variabel Python:
+- Nama variabel harus dimulai dengan huruf atau karakter garis bawah
+- Nama variabel tidak boleh dimulai dengan angka
+- Nama variabel hanya boleh berisi karakter alfanumerik dan garis bawah (Az, 0-9, dan _ )
+- Nama variabel membedakan antara huruf besar/kecil (usia, Usia, dan USIA adalah tiga variabel berbeda). [2]
+>> beberapa tipe data yang umum dalam bahasa pemrograman Python:
+- int (Integer): Tipe data untuk bilangan bulat, misalnya: 10, -3, 129.
+- float: Tipe data untuk bilangan desimal (pecahan), misalnya: 3.14, 0.5, -7.8.
+- str (String): Tipe data untuk teks atau kumpulan karakter, misalnya: "Halo", 'Python'.
+- bool (Boolean): Tipe data yang hanya memiliki dua nilai, yaitu True atau False.
+- list: Tipe data untuk menyimpan kumpulan nilai dalam bentuk daftar, misalnya: [1, 2, 3], ['a', 'b', 'c'].
+- tuple: Mirip dengan list, tapi bersifat immutable (tidak dapat diubah), misalnya: (1, 2, 3).
+- dict (Dictionary): Tipe data yang menyimpan pasangan kunci-nilai (key-value pairs), misalnya: {"nama": "Ali", "umur": 25}.
+- set: Kumpulan data yang tidak berurutan dan tidak memiliki elemen yang sama (unik), misalnya: {1, 2, 3}, {3, 4, 5}.
+- NoneType: Tipe data khusus yang hanya memiliki nilai None, biasanya digunakan untuk merepresentasikan ketiadaan nilai.
 
-Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
+  
+### Percabangan (If-Else)
+Pemilihan  (selection),  yaitu  instruksi  yang dikerjakan berdasarkan kondisi tertentu atau syarat tertentu dimana  suatu  kondisi atau syarat  tersebut dapat   bernilai   benar   atau   salah.   Intruksi   akan dilaksanakan manakala kondisi atau syarat bernilai benar,  dan  suatu  instruksi  tidak  akan  dikerjakan apabila kondisi atau syarat tidak terpenuhi.Pemilihan atau percabangan  menggunakan statemen   If,   If/Else,   If/Elif/Else.   Statemen   If digunakan   saatter  dapat  satu  pilihan,   statemen If/Else   digunakan   saatter   dapat   dua   pilihan, statemen  If/Elif/Else  digunakan  apabila  terapat lebih  dari  dua  pilihan [3].
+
+
+  
+### Perulangan (Loops)
+![image](https://github.com/user-attachments/assets/f22675c5-8d8a-4f3e-b0c1-35f24f18c686)
+sumber : https://repository.penerbiteureka.com/id/publications/560015/fundamental-bahasa-pemrograman-python
+Untuk  memenuhi  kebutuhan  perulangan  perintahpada bahasa  pemrograman  Python.Terdapat  3  pilihanloop.  Secara teknik  fungsionalitas  dasar  3  pilihanloop  ini  adalah  sama, meskipun  sintaks  dan jumlah  waktu  yang  diperlukan  untuk memeriksa kondisinya berbeda.
+
+### Fungsi (Functions)
+Fungsi (functions) dalam Python adalah blok kode yang dirancang untuk menjalankan tugas tertentu dan dapat dipanggil berulang kali. Fungsi digunakan untuk mengorganisasi kode agar lebih modular, mudah dipelihara, dan dapat digunakan kembali. Fungsi didefinisikan menggunakan kata kunci def diikuti dengan nama fungsi, tanda kurung (), dan tanda titik dua :. Di dalam tanda kurung, fungsi dapat menerima argumen, dan setelahnya diikuti oleh blok kode yang menjadi isi fungsi. 
 
 # Guided 
 ## 1. Variabel
@@ -637,4 +667,8 @@ Program ini menggunakan algoritma binary search untuk mencari bilangan genap dal
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1] Rahman, S., Sembiring, A., Siregar, D., Prahmana, I. G., Puspadini, R., & Zen, M. (2023). Python: Dasar dan Pemrograman Berorientasi Objek. Penerbit Tahta Media. (https://tahtamedia.co.id/index.php/issj/article/view/344)
+
+[2] Python, T. D. P. (2024). BAB 2 VARIABEL DAN TIPE DATA PYTHON. Bahasa Pemrograman Python, 12. 
+
+[3] Romzi, M., & Kurniawan, B. (2020). Pembelajaran Pemrograman Python Dengan Pendekatan Logika Algoritma. JTIM: Jurnal Teknik Informatika Mahakarya, 3(2), 37-44.
