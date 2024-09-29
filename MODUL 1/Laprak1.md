@@ -61,7 +61,7 @@ print_prime_pattern(5)
 ![image](https://github.com/user-attachments/assets/25eefb8f-e30e-4703-9eb0-85a757580bdf)
 
 #### Penjelasan:
-Kode di atas menggunakan fungsi is_prime(num) - Mengecek apakah bilangan adalah bilangan prima
+Kode di atas menggunakan fungsi is_prime(num) untuk mengecek apakah bilangan adalah bilangan prima
 - Tujuan Fungsi: Fungsi ini digunakan untuk memeriksa apakah suatu bilangan num merupakan bilangan prima atau tidak.
 - Langkah-langkah:
 - Baris if num < 2:: Jika bilangan lebih kecil dari 2, langsung dikembalikan False karena bilangan prima dimulai dari 2.
