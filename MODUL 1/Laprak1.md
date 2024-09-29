@@ -190,6 +190,12 @@ print(f"rata-rata nilai siswa: {rata_rata}")
 print(f"\nMahasiswa dengan nilai rata-rata tertinggi: {nilai_tertinggi} ")
 print(f"Mahasiswa dengan nilai rata-rata terendah: {nilai_terendah} ")
 ```
+
+
+#### Output:
+![image](https://github.com/user-attachments/assets/7933dd27-8fd2-4b88-a7a0-019f51d9a51c)
+
+
 #### Penjelasan:
 csv adalah modul Python yang digunakan untuk membaca dan menulis file CSV (Comma-Separated Values). Dalam kode ini, modul ini digunakan untuk membaca data dari file CSV yang berisi data nilai mahasiswa.
 - Membuka file CSV dengan mode baca ('r').
@@ -211,8 +217,6 @@ csv adalah modul Python yang digunakan untuk membaca dan menulis file CSV (Comma
 - Program kemudian menampilkan rata-rata nilai setiap mahasiswa.
 - Fungsi cari_nilai_tertinggi_terendah() dipanggil untuk menemukan mahasiswa dengan nilai rata-rata tertinggi dan terendah, lalu hasilnya ditampilkan.
 
-
-#### Output:
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
