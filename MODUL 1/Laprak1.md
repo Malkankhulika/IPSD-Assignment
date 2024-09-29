@@ -579,26 +579,24 @@ main()
 #### Penyelesaian:
 Penjelasan Kode:
 1. Fungsi binary_search_genap(arr, target):
-•	Fungsi ini melakukan pencarian bilangan genap dengan metode binary search.
-•	Bagian ini memeriksa apakah bilangan yang dicari (target) adalah ganjil. Jika iya, maka fungsi langsung mengembalikan nilai -1 dan mengeluarkan pesan bahwa bilangan tersebut tidak bisa dicari, karena hanya bilangan genap yang akan dicari.
-•	low dan high digunakan sebagai batas bawah dan batas atas dari list selama pencarian. Pada awalnya, low dimulai dari indeks 0, dan high dari indeks terakhir (panjang list - 1).
-•	Selama batas bawah tidak melebihi batas atas, pencarian tetap dilakukan. mid dihitung sebagai nilai tengah dari indeks saat ini.
-•	Jika nilai tengah (nilai di arr[mid]) sama dengan target, maka indeks mid dikembalikan sebagai hasil.
-•	Jika nilai tengah lebih kecil dari target, batas bawah low diperbarui ke mid + 1 untuk memfokuskan pencarian di bagian kanan list.
-•	Jika nilai tengah lebih besar dari target, batas atas high diperbarui ke mid - 1 untuk memfokuskan pencarian di bagian kiri list.
-•	Jika tidak ditemukan setelah pencarian selesai, fungsi mengembalikan -1 untuk menunjukkan bahwa target tidak ada di dalam list.
+- Fungsi ini melakukan pencarian bilangan genap dengan metode binary search.Bagian ini memeriksa apakah bilangan yang dicari (target) adalah ganjil. Jika iya, maka fungsi langsung mengembalikan nilai -1 dan mengeluarkan pesan bahwa bilangan tersebut tidak bisa dicari, karena hanya bilangan genap yang akan dicari.
+- low dan high digunakan sebagai batas bawah dan batas atas dari list selama pencarian. Pada awalnya, low dimulai dari indeks 0, dan high dari indeks terakhir (panjang list - 1).
+- Selama batas bawah tidak melebihi batas atas, pencarian tetap dilakukan. mid dihitung sebagai nilai tengah dari indeks saat ini.
+- Jika nilai tengah (nilai di arr[mid]) sama dengan target, maka indeks mid dikembalikan sebagai hasil.
+- Jika nilai tengah lebih kecil dari target, batas bawah low diperbarui ke mid + 1 untuk memfokuskan pencarian di bagian kanan list.
+- Jika nilai tengah lebih besar dari target, batas atas high diperbarui ke mid - 1 untuk memfokuskan pencarian di bagian kiri list.
+- Jika tidak ditemukan setelah pencarian selesai, fungsi mengembalikan -1 untuk menunjukkan bahwa target tidak ada di dalam list.
+  
 2. Fungsi main():
-•	Bagian ini adalah fungsi utama yang menerima input dari pengguna dan menjalankan logika pencarian.
-•	List ini hanya berisi bilangan genap yang telah diurutkan.
-•	Pengguna diminta memasukkan angka yang ingin dicari, dan input tersebut dikonversi menjadi integer.
-•	Fungsi binary_search_genap() dipanggil dengan list arr dan target yang diinputkan pengguna. Fungsi ini akan mengembalikan indeks tempat target ditemukan, atau -1 jika target tidak ditemukan atau merupakan bilangan ganjil.
-•	•  Jika hasil pencarian (index) bukan -1, maka program menampilkan bahwa nilai tersebut ditemukan pada indeks tertentu.
-•	•  Jika tidak ditemukan dan target adalah bilangan genap, program akan menampilkan pesan bahwa target tidak ada di list.
-•	•  Jika pengguna memasukkan bilangan ganjil, pesan "Nilai X adalah bilangan ganjil dan tidak bisa ditemukan" akan muncul sebelumnya di fungsi binary_search_genap().
-4.	Penanganan Input yang Tidak Valid:
-Jika pengguna memasukkan input yang bukan angka, program akan menangani kesalahan tersebut dan menampilkan pesan bahwa input tidak valid.
-
-Kesimpulan:
+- Bagian ini adalah fungsi utama yang menerima input dari pengguna dan menjalankan logika pencarian.
+- List ini hanya berisi bilangan genap yang telah diurutkan.
+- Pengguna diminta memasukkan angka yang ingin dicari, dan input tersebut dikonversi menjadi integer.
+- Fungsi binary_search_genap() dipanggil dengan list arr dan target yang diinputkan pengguna. Fungsi ini akan mengembalikan indeks tempat target ditemukan, atau -1 jika target tidak ditemukan atau merupakan bilangan ganjil.
+- Jika hasil pencarian (index) bukan -1, maka program menampilkan bahwa nilai tersebut ditemukan pada indeks tertentu.
+- Jika tidak ditemukan dan target adalah bilangan genap, program akan menampilkan pesan bahwa target tidak ada di list.
+- Jika pengguna memasukkan bilangan ganjil, pesan "Nilai X adalah bilangan ganjil dan tidak bisa ditemukan" akan muncul sebelumnya di fungsi binary_search_genap().
+3. Penanganan Input yang Tidak Valid: Jika pengguna memasukkan input yang bukan angka, program akan menangani kesalahan tersebut dan menampilkan pesan bahwa input tidak valid.
+4. Kesimpulan:
 Program ini menggunakan algoritma binary search untuk mencari bilangan genap dalam list yang sudah diurutkan. Program juga menangani kasus ketika pengguna memasukkan bilangan ganjil atau input yang tidak valid.
 
 
