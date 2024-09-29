@@ -22,7 +22,6 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 2 3
 5 7 11
 13 17 19 23
-...
 ```
 Jumlah angka pada setiap baris bertambah 1, dan bilangan yang ditampilkan adalah bilangan prima.
 
