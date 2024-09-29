@@ -264,21 +264,20 @@ tebak_angka()
 #### Penjelasan:
 random adalah modul yang menyediakan fungsi untuk menghasilkan angka acak. Di sini, digunakan untuk memilih angka rahasia yang harus ditebak oleh pengguna.
 1.	Proses menebak angka
-•	•  Looping Percobaan: Program menggunakan for loop untuk memberi pengguna 5 kesempatan. Setiap loop mewakili satu percobaan.
-•	•  Program meminta pengguna untuk memasukkan angka tebakan, yang akan dikonversi menjadi integer menggunakan int(input()).
-•	•  try-except block digunakan untuk menangani jika input yang diberikan bukan angka, sehingga mencegah error.
+- Looping Percobaan: Program menggunakan for loop untuk memberi pengguna 5 kesempatan. Setiap loop mewakili satu percobaan.
+- Program meminta pengguna untuk memasukkan angka tebakan, yang akan dikonversi menjadi integer menggunakan int(input()).
+- try-except block digunakan untuk menangani jika input yang diberikan bukan angka, sehingga mencegah error.
+  
 2. Membandingkan tebakan dengan angka rahasia
-•  Jika tebakan pengguna tepat (sama dengan angka rahasia), program menampilkan pesan kemenangan dan keluar dari loop menggunakan break.
-•  Jika tebakan pengguna terlalu kecil, program menampilkan pesan "Tebakan Anda terlalu kecil".
-•  Jika tebakan pengguna terlalu besar, program menampilkan pesan "Tebakan Anda terlalu besar".
+- Jika tebakan pengguna tepat (sama dengan angka rahasia), program menampilkan pesan kemenangan dan keluar dari loop menggunakan break.
+- Jika tebakan pengguna terlalu kecil, program menampilkan pesan "Tebakan Anda terlalu kecil".
+- Jika tebakan pengguna terlalu besar, program menampilkan pesan "Tebakan Anda terlalu besar".
+  
 3. Interpretasi atau alur permainan
-•  Komputer memilih angka rahasia, misalnya 55.
-•  Pengguna diminta menebak angka, misalnya menebak 30.
-    o	Program memberi tahu bahwa tebakan terlalu kecil.
-•  Pengguna menebak lagi, misalnya 60.
-    o	Program memberi tahu bahwa tebakan terlalu besar.
-4.	Pengguna menebak angka 55.
-    o	Program memberi tahu bahwa tebakan benar, dan pengguna menang dan Jika pengguna tidak berhasil menebak dalam 5 percobaan, program akan memberi tahu angka yang benar.
+- Komputer memilih angka rahasia, misalnya 55.
+- Pengguna diminta menebak angka, misalnya menebak 30: Program memberi tahu bahwa tebakan terlalu kecil.
+- Pengguna menebak lagi, misalnya 60: Program memberi tahu bahwa tebakan terlalu besar.
+- Pengguna menebak angka 55 : Program memberi tahu bahwa tebakan benar, dan pengguna menang dan Jika pengguna tidak berhasil menebak dalam 5 percobaan, program akan memberi tahu angka yang benar.
 
 ### 6. Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
 ```
