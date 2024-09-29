@@ -1,7 +1,7 @@
 <h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
 <p align="center">Khulika Malkan</p>
 
-# Dasar Teori
+## Dasar Teori
 
 Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
 
