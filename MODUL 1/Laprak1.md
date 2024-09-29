@@ -214,6 +214,72 @@ csv adalah modul Python yang digunakan untuk membaca dan menulis file CSV (Comma
 - Program kemudian menampilkan rata-rata nilai setiap mahasiswa.
 - Fungsi cari_nilai_tertinggi_terendah() dipanggil untuk menemukan mahasiswa dengan nilai rata-rata tertinggi dan terendah, lalu hasilnya ditampilkan.
 
+### 5. Buatlah permainan sederhana menggunakan Python, di mana komputer akan memilih sebuah angka secara acak antara 1 hingga 100, dan pengguna harus menebak angka tersebut. Setiap tebakan yang salah akan memberikan petunjuk apakah angka yang ditebak lebih besar atau lebih kecil dari angka sebenarnya. Batasi jumlah percobaan menjadi 5 kali. Setelah permainan selesai, tampilkan apakah pemain menang atau kalah.
+#### Kode Program:
+```python
+# import modul untuk menyediakan fungsi yang menghasilkan angka acak
+import random
+
+# Fungsi tebak_angka()
+def tebak_angka():
+    angka_rahasia = random.randint(1, 100)  # Komputer memilih angka acak antara 1 dan 100
+    kesempatan = 5  # Pengguna memiliki 5 kesempatan
+
+# Pesan Selamat Datang
+    print("Selamat datang di permainan Tebak Angka!")
+    print("Saya telah memilih angka antara 1 hingga 100.")
+    print(f"Anda memiliki {kesempatan} kali percobaan untuk menebak angka tersebut.")
+
+    # Mulai loop untuk 5 percobaan/proses menebak angka
+    for percobaan in range(1, kesempatan + 1):
+        try:
+            tebakan = int(input(f"Tebakan {percobaan}: Masukkan angka tebakan Anda: "))
+
+            if tebakan < 1 or tebakan > 100:    # validasi input
+                print("Angka harus antara 1 hingga 100. Coba lagi.")
+                continue
+
+            if tebakan == angka_rahasia:    # Membandingkan Tebakan dengan Angka Rahasia
+                print(f"Selamat! Anda berhasil menebak angka {angka_rahasia} dalam {percobaan} percobaan.")
+                break
+            elif tebakan < angka_rahasia:
+                print("Tebakan Anda terlalu kecil.")
+            else:
+                print("Tebakan Anda terlalu besar.")
+
+        except ValueError:    # Penanganan Error Input
+            print("Input tidak valid. Masukkan angka yang benar.")
+            continue
+
+    else:
+        # Jika tidak menebak dengan benar dalam 5 kali percobaan
+        print(f"Maaf, Anda kehabisan kesempatan. Angka yang benar adalah {angka_rahasia}.")
+
+# Menjalankan permainan/memanggil fungsi tebak_angka() untuk memulai
+tebak_angka()
+```
+#### Output:
+![image](https://github.com/user-attachments/assets/1b9c0728-b783-4fa3-9648-e915636b666e)
+
+#### Penjelasan:
+random adalah modul yang menyediakan fungsi untuk menghasilkan angka acak. Di sini, digunakan untuk memilih angka rahasia yang harus ditebak oleh pengguna.
+1.	Proses menebak angka
+•	•  Looping Percobaan: Program menggunakan for loop untuk memberi pengguna 5 kesempatan. Setiap loop mewakili satu percobaan.
+•	•  Program meminta pengguna untuk memasukkan angka tebakan, yang akan dikonversi menjadi integer menggunakan int(input()).
+•	•  try-except block digunakan untuk menangani jika input yang diberikan bukan angka, sehingga mencegah error.
+2. Membandingkan tebakan dengan angka rahasia
+•  Jika tebakan pengguna tepat (sama dengan angka rahasia), program menampilkan pesan kemenangan dan keluar dari loop menggunakan break.
+•  Jika tebakan pengguna terlalu kecil, program menampilkan pesan "Tebakan Anda terlalu kecil".
+•  Jika tebakan pengguna terlalu besar, program menampilkan pesan "Tebakan Anda terlalu besar".
+3. Interpretasi atau alur permainan
+•  Komputer memilih angka rahasia, misalnya 55.
+•  Pengguna diminta menebak angka, misalnya menebak 30.
+    o	Program memberi tahu bahwa tebakan terlalu kecil.
+•  Pengguna menebak lagi, misalnya 60.
+    o	Program memberi tahu bahwa tebakan terlalu besar.
+4.	Pengguna menebak angka 55.
+    o	Program memberi tahu bahwa tebakan benar, dan pengguna menang dan Jika pengguna tidak berhasil menebak dalam 5 percobaan, program akan memberi tahu angka yang benar.
+
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
