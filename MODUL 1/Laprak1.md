@@ -25,7 +25,37 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 ```
 
 ```python
-print("ini adalah file code guided praktikan")
+# Fungsi untuk memeriksa apakah suatu bilangan adalah prima
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# Fungsi untuk mencetak pola bilangan prima dengan batas tertentu
+def print_prime_pattern(limit):
+    prime_count = 0  # Menghitung jumlah bilangan prima yang telah ditemukan
+    num = 2  # Memulai pencarian bilangan prima dari angka 2
+
+    for row in range(1, limit+1):
+        # Cetak bilangan prima sebanyak 'row' buah di baris ini
+        for _ in range(row):
+            # Cari bilangan prima berikutnya
+            while not is_prime(num):
+                num += 1
+            # Tampilkan bilangan prima
+            print(num, end=' ')
+            num += 1  # Siapkan untuk bilangan prima berikutnya
+
+            prime_count += 1  # Hitung jumlah bilangan prima yang dicetak
+            if prime_count == 9:  # Berhenti jika sudah sampai bilangan prima ke-9 (yaitu 23)
+                return
+        print()  # Ganti baris setelah mencetak bilangan prima untuk baris ini
+
+# Menjalankan program hingga bilangan prima 23
+print_prime_pattern(5)
 ```
 #### Output:
 ![image](https://github.com/user-attachments/assets/fc05c081-b447-4e91-a2fc-24f481d8a593)
