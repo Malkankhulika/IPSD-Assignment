@@ -280,7 +280,7 @@ random adalah modul yang menyediakan fungsi untuk menghasilkan angka acak. Di si
 4.	Pengguna menebak angka 55.
     o	Program memberi tahu bahwa tebakan benar, dan pengguna menang dan Jika pengguna tidak berhasil menebak dalam 5 percobaan, program akan memberi tahu angka yang benar.
 
-### 5. Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
+### 6. Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
 ```
 Input: n = 4
 Output: 1, 1, 2, 6, 24
@@ -344,6 +344,82 @@ Contoh untuk menghasilkan deret faktorial dari 0 hingga 4: deret_faktorial(4):
 - n = 4 berarti kita ingin menghitung deret faktorial dari 0 hingga 4.
 - Fungsi deret_faktorial(n) akan menghasilkan deret [1, 1, 2, 6, 24], yang kemudian dicetak sebagai string dengan pemisah koma.
 - Program menghasilkan output deret faktorial dari 0 hingga 4
+### 7. Buatlah program untuk memecahkan masalah "minimum coin change". Diberikan jumlah uang dan daftar nilai koin yang tersedia (misalnya, 1, 5, 10, 25), tentukan kombinasi minimum koin yang diperlukan untuk mencapai jumlah uang tersebut. Namun, program Anda harus bisa menangani koin-koin yang nilai dan jumlahnya ditentukan pengguna.
+```python
+def minimum_coin_change(total, koin_tersedia):
+    # Mengurutkan koin dari yang terbesar ke terkecil
+    koin_tersedia.sort(reverse=True)
+
+# Menginisialisasi variabel hasil dan sisa uang
+    hasil = {}
+    sisa_uang = total
+
+# Menghitung jumlah koin yang bisa digunakan untuk tiap denominasi:
+    for koin in koin_tersedia:
+        if sisa_uang >= koin:
+            jumlah_koin = sisa_uang // koin  # Berapa banyak koin ini bisa digunakan
+            sisa_uang = sisa_uang % koin  # Sisa uang yang belum dibayar
+            hasil[koin] = jumlah_koin  # Simpan hasil ke dictionary
+
+    # Jika sisa_uang masih lebih besar dari 0, berarti kombinasi koin tidak dapat mencapai jumlah yang diinginkan
+    if sisa_uang > 0:
+        print(f"Jumlah uang {total} tidak bisa dicapai dengan kombinasi koin yang tersedia.")
+   # Menampilkan kombinasi koin yang digunakan
+    else:
+        print(f"Kombinasi minimum untuk mencapai {total}:")
+        for koin, jumlah in hasil.items():
+            print(f"Koin {koin}: {jumlah} koin")
+
+# Fungsi utama untuk input dari pengguna
+def main():
+    try:
+        total_uang = int(input("Masukkan jumlah uang yang ingin dicapai: "))
+        koin_tersedia = list(map(int, input("Masukkan nilai koin yang tersedia (pisahkan dengan spasi): ").split()))
+
+        # Memanggil fungsi untuk menghitung kombinasi minimum koin
+        minimum_coin_change(total_uang, koin_tersedia)
+
+    except ValueError:
+        print("Input tidak valid. Pastikan Anda memasukkan angka yang benar.")
+
+# Menjalankan program
+main()
+```
+#### Output:
+![image](https://github.com/user-attachments/assets/6cb3b3b0-b548-48ee-a8c4-51f6c95d1e86)
+
+#### Penjelasan:
+PENJELASAN 
+1.	Mengurutkan koin dari yang terbesar ke terkecil
+•	•  Program mengurutkan nilai koin dari yang terbesar ke yang terkecil, karena dengan menggunakan koin yang lebih besar terlebih dahulu, kita bisa mengurangi jumlah koin yang dibutuhkan.
+•	•  Misalnya, jika kita punya koin 25, 10, dan 1, maka lebih efisien menggunakan koin 25 dulu daripada menggunakan koin 1 atau 10.
+3.	Menginisialisasi variabel hasil dan sisa uang
+
+•  hasil adalah dictionary (kamus) yang akan menyimpan berapa banyak setiap jenis koin yang digunakan.
+•  sisa_uang adalah variabel yang menyimpan sisa uang yang belum dibayar dengan koin. Pada awalnya, sisa uang sama dengan jumlah uang yang ingin dicapai (total).
+
+4.	Menghitung jumlah koin yang bisa digunakan untuk tiap denominasi
+
+•	•  Program melakukan iterasi melalui setiap koin dalam koin_tersedia.
+•	sisa_uang // koin menghitung berapa banyak koin tersebut yang bisa digunakan. Misalnya, jika kita punya sisa 87 dan koin 25, maka kita bisa menggunakan 3 koin 25 (karena 87//25=387 // 25 = 387//25=3).
+•	sisa_uang % koin menghitung sisa uang setelah menggunakan koin tersebut. Misalnya, 87%25=1287 \% 25 = 1287%25=12, jadi setelah menggunakan 3 koin 25, sisa uangnya adalah 12.
+•	hasil[koin] = jumlah_koin menyimpan jumlah koin yang digunakan dalam dictionary hasil.
+5.	 Memeriksa apakah jumlah uang bisa dicapai:
+
+•	•  Jika setelah semua koin digunakan masih ada sisa uang yang belum bisa dibayar (sisa_uang > 0), program akan menampilkan pesan bahwa jumlah uang tidak bisa dicapai dengan koin yang ada.
+6.	Menampilkan kombinasi koin yang digunakan:
+
+o	Jika sisa_uang menjadi 0 (artinya uang sudah bisa dibayar sepenuhnya dengan koin yang tersedia), program akan menampilkan kombinasi minimum koin yang digunakan.
+7.	Penjelasan Fungsi main():
+
+1.	Input dari pengguna:
+o	Program meminta pengguna memasukkan jumlah uang yang ingin dicapai dan nilai koin yang tersedia. Pengguna harus memasukkan nilai koin dipisahkan dengan spasi.
+2.	Menangani kesalahan input:
+o	Penggunaan try-except untuk menangani kemungkinan kesalahan input, seperti ketika pengguna memasukkan nilai yang bukan angka. Jika terjadi kesalahan input, program akan menampilkan pesan "Input tidak valid".
+Cara Kerja Program:
+1.	Program meminta pengguna untuk memasukkan jumlah uang dan nilai koin yang tersedia.
+2.	Program akan mencoba mencari kombinasi minimum koin untuk mencapai jumlah uang tersebut.
+3.	Jika jumlah uang bisa dicapai dengan kombinasi koin yang tersedia, program menampilkan kombinasi koin yang digunakan. Jika tidak bisa dicapai, program memberi tahu pengguna bahwa kombinasi koin tidak cukup.
 
 
 ## Kesimpulan
