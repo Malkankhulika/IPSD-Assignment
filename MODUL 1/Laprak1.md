@@ -715,7 +715,13 @@ Program ini menggunakan algoritma binary search untuk mencari bilangan genap dal
 
 
 # Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Dari pembelajaran dasar-dasar Python, saya belajar banyak hal yang membantu saya memahami cara kerja pemrograman. Pertama, saya belajar tentang berbagai tipe data seperti angka, teks, dan daftar, yang penting untuk menyimpan informasi. Saya juga memahami struktur data seperti list, tuple, dictionary, dan set, yang masing-masing memiliki cara penggunaan yang berbeda.
+
+Saya belajar cara menggunakan if dan loop seperti for dan while untuk mengatur alur program. Selain itu, saya juga mengenal fungsi yang membuat kode lebih terorganisir dan mudah digunakan kembali. Konsep pemrograman berorientasi objek (OOP) memperlihatkan bagaimana kita bisa membuat kelas dan objek, yang membuat program lebih terstruktur.
+
+Hal lain yang penting adalah saya belajar cara menangani kesalahan dengan penanganan exception, sehingga program bisa berjalan lebih stabil. Dengan memahami modul dan paket, saya bisa mengorganisir kode menjadi bagian-bagian kecil yang lebih mudah dikelola.
+
+Secara keseluruhan, pembelajaran ini memberikan saya dasar yang kuat untuk melanjutkan belajar lebih jauh dalam pemrograman Python. Meskipun masih banyak yang harus dipelajari, saya merasa lebih percaya diri untuk menerapkan apa yang sudah saya pelajari dalam proyek-proyek mendatang.
 
 ## Referensi
 [1] Rahman, S., Sembiring, A., Siregar, D., Prahmana, I. G., Puspadini, R., & Zen, M. (2023). Python: Dasar dan Pemrograman Berorientasi Objek. Penerbit Tahta Media. (https://tahtamedia.co.id/index.php/issj/article/view/344)
