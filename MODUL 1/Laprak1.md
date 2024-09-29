@@ -92,6 +92,9 @@ list2 = [11, 22, 33, 44, 55, 66]
 hasil = ambil_ganjil_dan_urutkan(list1, list2)
 print(hasil)
 ```
+#### Output:
+![image](https://github.com/user-attachments/assets/883b1867-a66f-41ea-ae5a-fec3aad6358b)
+
 #### penjelasan:
 kode ini membuat Fungsi: ambil_ganjil_dan_urutkan(list1, list2)
 Fungsi ini memiliki dua daftar input, list1 dan list2. Tugas dari fungsi ini adalah:
@@ -99,6 +102,16 @@ Fungsi ini memiliki dua daftar input, list1 dan list2. Tugas dari fungsi ini ada
 - Menggabungkan elemen-elemen tersebut menjadi satu daftar.
 - Mengurutkan hasil gabungan tadi secara menurun (dari yang terbesar ke yang terkecil).
 - Mengembalikan hasil akhir berupa daftar elemen yang sudah diurutkan.
+
+### 3. Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus: 
+1. Meminta pengguna memasukkan PIN (dibatasi 3 kali percobaan).
+2. Setelah PIN benar, meminta jumlah penarikan.
+3. Jika saldo kurang dari jumlah yang ditarik, munculkan pesan kesalahan.
+4. Jika penarikan berhasil, tampilkan saldo akhir.
+
+```python
+print("ini adalah file code guided praktikan")
+```
 
 
 ## Kesimpulan
