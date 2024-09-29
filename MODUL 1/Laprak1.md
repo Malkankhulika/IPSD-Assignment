@@ -472,6 +472,134 @@ Penjelasan Fungsi main():
 3.	Menampilkan hasil:
 Program menampilkan hasil, yaitu list dari kata-kata yang sudah dibalik.
 
+### 9. Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku.
+#### Kode Progrram:
+```python
+from datetime import datetime
+
+# Definisi class Buku
+class Buku:
+    # Constructor untuk menginisialisasi atribut
+    def __init__(self, judul, penulis, tahun_terbit):
+        self.judul = judul
+        self.penulis = penulis
+        self.tahun_terbit = tahun_terbit
+
+    # Method untuk menampilkan informasi buku
+    def info_buku(self):
+        print(f"Judul: {self.judul}")
+        print(f"Penulis: {self.penulis}")
+        print(f"Tahun Terbit: {self.tahun_terbit}")
+
+    # Method untuk menghitung usia buku
+    def usia_buku(self):
+        tahun_sekarang = datetime.now().year
+        usia = tahun_sekarang - self.tahun_terbit
+        return usia
+
+# Membuat tiga objek dari class Buku
+buku1 = Buku("Infrastruktur dan Struktur Data", "Siti Khomsah", 1977)
+buku2 = Buku("Fisolofi Hidup", "K. Malkan", 2005)
+buku3 = Buku("Mencintai dalam hati", "RWP", 2004)
+
+# Menampilkan informasi dan usia dari setiap buku
+for buku in [buku1, buku2, buku3]:
+    buku.info_buku()
+    print(f"Usia Buku: {buku.usia_buku()} tahun")
+    print("-" * 30)
+```
+#### Output:
+![image](https://github.com/user-attachments/assets/da49032c-4435-457f-a55e-cef31ae28917)
+
+#### Penyelesaian:
+1. Class Buku:
+- Class ini memiliki 3 atribut: judul, penulis, dan tahun_terbit.
+- Method tampilkan_info() digunakan untuk mencetak informasi buku (judul, penulis, dan tahun terbit).
+- Method hitung_usia() digunakan untuk menghitung usia buku berdasarkan tahun saat ini yang diambil menggunakan fungsi datetime.now().year.
+2. Pembuatan Objek:
+- Tiga objek dari class Buku dibuat: buku1, buku2, dan buku3.
+- Setiap objek diberi nilai judul, penulis, dan tahun terbit.
+3. Tampilan Output:
+- Informasi buku ditampilkan menggunakan method tampilkan_info().
+- Usia buku dihitung dan ditampilkan menggunakan method hitung_usia().
+
+### 10. Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
+#### Kode Program:
+```python
+def binary_search_genap(arr, target):
+    # Pastikan nilai yang dicari adalah bilangan genap
+    if target % 2 != 0:
+        print(f"Nilai {target} adalah bilangan ganjil dan tidak bisa ditemukan.")
+        return -1
+
+    # Implementasi pencarian biner
+    low = 0
+    high = len(arr) - 1
+
+    while low <= high:
+        mid = (low + high) // 2
+
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+
+    # Jika tidak ditemukan
+    return -1
+
+# Fungsi utama untuk input dari pengguna
+def main():
+    # List hanya berisi angka genap
+    arr = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+    try:
+        # Input nilai yang ingin dicari
+        target = int(input("Masukkan nilai yang ingin dicari: "))
+
+        # Panggil fungsi binary search yang dimodifikasi
+        index = binary_search_genap(arr, target)
+
+        if index != -1:
+            print(f"Nilai {target} ditemukan pada indeks {index}.")
+        else:
+            if target % 2 == 0:
+                print(f"Nilai {target} tidak ditemukan dalam list.")
+
+    except ValueError:
+        print("Input tidak valid. Masukkan angka yang benar.")
+
+# Menjalankan program
+main()
+```
+#### Output:
+![image](https://github.com/user-attachments/assets/834c218a-ec72-43ee-8abf-d9e34ec00e02)
+
+#### Penyelesaian:
+Penjelasan Kode:
+1. Fungsi binary_search_genap(arr, target):
+•	Fungsi ini melakukan pencarian bilangan genap dengan metode binary search.
+•	Bagian ini memeriksa apakah bilangan yang dicari (target) adalah ganjil. Jika iya, maka fungsi langsung mengembalikan nilai -1 dan mengeluarkan pesan bahwa bilangan tersebut tidak bisa dicari, karena hanya bilangan genap yang akan dicari.
+•	low dan high digunakan sebagai batas bawah dan batas atas dari list selama pencarian. Pada awalnya, low dimulai dari indeks 0, dan high dari indeks terakhir (panjang list - 1).
+•	Selama batas bawah tidak melebihi batas atas, pencarian tetap dilakukan. mid dihitung sebagai nilai tengah dari indeks saat ini.
+•	Jika nilai tengah (nilai di arr[mid]) sama dengan target, maka indeks mid dikembalikan sebagai hasil.
+•	Jika nilai tengah lebih kecil dari target, batas bawah low diperbarui ke mid + 1 untuk memfokuskan pencarian di bagian kanan list.
+•	Jika nilai tengah lebih besar dari target, batas atas high diperbarui ke mid - 1 untuk memfokuskan pencarian di bagian kiri list.
+•	Jika tidak ditemukan setelah pencarian selesai, fungsi mengembalikan -1 untuk menunjukkan bahwa target tidak ada di dalam list.
+2. Fungsi main():
+•	Bagian ini adalah fungsi utama yang menerima input dari pengguna dan menjalankan logika pencarian.
+•	List ini hanya berisi bilangan genap yang telah diurutkan.
+•	Pengguna diminta memasukkan angka yang ingin dicari, dan input tersebut dikonversi menjadi integer.
+•	Fungsi binary_search_genap() dipanggil dengan list arr dan target yang diinputkan pengguna. Fungsi ini akan mengembalikan indeks tempat target ditemukan, atau -1 jika target tidak ditemukan atau merupakan bilangan ganjil.
+•	•  Jika hasil pencarian (index) bukan -1, maka program menampilkan bahwa nilai tersebut ditemukan pada indeks tertentu.
+•	•  Jika tidak ditemukan dan target adalah bilangan genap, program akan menampilkan pesan bahwa target tidak ada di list.
+•	•  Jika pengguna memasukkan bilangan ganjil, pesan "Nilai X adalah bilangan ganjil dan tidak bisa ditemukan" akan muncul sebelumnya di fungsi binary_search_genap().
+4.	Penanganan Input yang Tidak Valid:
+Jika pengguna memasukkan input yang bukan angka, program akan menangani kesalahan tersebut dan menampilkan pesan bahwa input tidak valid.
+
+Kesimpulan:
+Program ini menggunakan algoritma binary search untuk mencari bilangan genap dalam list yang sudah diurutkan. Program juga menangani kasus ketika pengguna memasukkan bilangan ganjil atau input yang tidak valid.
 
 
 ## Kesimpulan
