@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
+![image](https://github.com/user-attachments/assets/893ba859-8995-476c-91ec-86188858584d)# <h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
 <p align="center">Khulika Malkan</p>
 
 ## Dasar Teori
@@ -279,6 +279,73 @@ random adalah modul yang menyediakan fungsi untuk menghasilkan angka acak. Di si
     o	Program memberi tahu bahwa tebakan terlalu besar.
 4.	Pengguna menebak angka 55.
     o	Program memberi tahu bahwa tebakan benar, dan pengguna menang dan Jika pengguna tidak berhasil menebak dalam 5 percobaan, program akan memberi tahu angka yang benar.
+
+### 5. Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
+```
+Input: n = 4
+Output: 1, 1, 2, 6, 24
+```
+Dan Fungsi ini harus menggunakan konsep rekursi untuk menghitung faktorial setiap angka hingga `n`.
+#### Kode Program:
+```python
+# Fungsi rekursif untuk menghitung faktorial dari bilangan n
+def faktorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * faktorial(n - 1)
+
+# Fungsi rekursif untuk menghasilkan deret faktorial dari 0 hingga n
+def deret_faktorial(n):
+    if n == 0:
+        return [1]  # Basis kasus: faktorial dari 0 adalah 1
+    else:
+        deret_sebelumnya = deret_faktorial(n - 1)  # Rekursi
+        deret_sebelumnya.append(faktorial(n))  # Tambahkan faktorial n ke deret
+        return deret_sebelumnya
+
+# Tes fungsi
+n = 4
+hasil = deret_faktorial(n)
+print("Output:", ", ".join(map(str, hasil)))
+```
+#### Output:
+![image](https://github.com/user-attachments/assets/e4c34982-3a73-4d55-a1d4-9aeb385c46d1)
+
+#### Penjelasan:
+Dalam kode program ini ada dua fungsi utama:
+1.	Fungsi faktorial(n): Menghitung faktorial dari suatu bilangan menggunakan rekursi.
+2.	Fungsi deret_faktorial(n): Menghasilkan deret faktorial dari 0 hingga n menggunakan rekursi, dengan memanfaatkan fungsi faktorial().
+Faktorial dari suatu bilangan nnn adalah hasil perkalian semua bilangan bulat positif dari 1 hingga nnn. Sebagai contoh, faktorial dari 4 (ditulis sebagai 4!) adalah 4×3×2×1=244 \times 3 \times 2 \times 1 = 244×3×2×1=24.
+Fungsi_faktorial(n):
+•	Tujuan Fungsi: Menghitung faktorial dari bilangan nnn.
+•	Cara Kerja:
+o	Fungsi ini menggunakan konsep rekursi, yaitu memanggil dirinya sendiri hingga mencapai kondisi dasar.
+o	Kondisi dasar: Jika nnn adalah 0 atau 1, fungsi langsung mengembalikan nilai 1, karena faktorial dari 0 dan 1 adalah 1.
+o	Langkah rekursif: Jika n>1n > 1n>1, fungsi mengalikan nnn dengan hasil faktorial dari n−1n-1n−1 (yaitu memanggil dirinya sendiri dengan nilai n−1n-1n−1).
+Contoh untuk menghitung faktorial 4:
+•	faktorial(4) = 4 * faktorial(3) = 4 * 3 * faktorial(2) = 4 * 3 * 2 * faktorial(1) = 4 * 3 * 2 * 1 = 24.
+Fungsi deret_faktorial(n):
+•	Tujuan Fungsi: Menghasilkan sebuah deret/list yang berisi nilai faktorial dari angka 0 hingga nnn.
+•	Cara Kerja:
+o	Fungsi ini juga menggunakan rekursi.
+o	Kondisi dasar: Jika n=0n = 0n=0, maka fungsi mengembalikan list berisi nilai [1], karena faktorial 0 adalah 1.
+o	Langkah rekursif: Jika n>0n > 0n>0, fungsi akan memanggil dirinya sendiri untuk menghasilkan deret faktorial hingga n−1n-1n−1. Setelah deret sebelumnya (dari 0 hingga n−1n-1n−1) selesai dihitung, fungsi menambahkan hasil faktorial nnn ke dalam list.
+Contoh untuk menghasilkan deret faktorial dari 0 hingga 4:
+•	deret_faktorial(4):
+o	Memanggil deret_faktorial(3): Menghasilkan deret dari 0 hingga 3.
+o	Memanggil deret_faktorial(2): Menghasilkan deret dari 0 hingga 2.
+o	Memanggil deret_faktorial(1): Menghasilkan deret dari 0 hingga 1.
+o	Memanggil deret_faktorial(0): Menghasilkan [1] (basis kasus).
+o	Lalu, pada setiap langkah rekursi, hasil faktorial masing-masing nnn (dihitung menggunakan fungsi faktorial()) ditambahkan ke dalam list:
+	Pada n=1n = 1n=1, hasilnya [1, 1].
+	Pada n=2n = 2n=2, hasilnya [1, 1, 2].
+	Pada n=3n = 3n=3, hasilnya [1, 1, 2, 6].
+	Pada n=4n = 4n=4, hasilnya [1, 1, 2, 6, 24].
+MENJALANKAN PROGRAM
+•  n = 4 berarti kita ingin menghitung deret faktorial dari 0 hingga 4.
+•  Fungsi deret_faktorial(n) akan menghasilkan deret [1, 1, 2, 6, 24], yang kemudian dicetak sebagai string dengan pemisah koma.
+•  Program menghasilkan output deret faktorial dari 0 hingga 4
 
 
 ## Kesimpulan
