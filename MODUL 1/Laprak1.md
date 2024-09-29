@@ -157,27 +157,21 @@ atm_simulasi()
 
 #### Penjelasan:
 1. Proses input PIN
-•  Looping PIN: Program akan meminta pengguna untuk memasukkan PIN hingga PIN yang dimasukkan benar atau hingga kesempatan habis.
-•  Jika PIN yang dimasukkan benar, program akan menampilkan pesan "PIN benar" dan keluar dari proses ini.
-•  Jika PIN yang dimasukkan salah, jumlah kesempatan akan berkurang, dan pengguna akan diberitahu berapa banyak kesempatan yang tersisa.
-•  Jika kesempatan habis (setelah 3 kali percobaan salah), akun akan diblokir, dan program akan berhenti.
-2.	PROSES PENARIKAN UANG
-•  Looping Penarikan: Setelah PIN benar, program meminta pengguna memasukkan jumlah uang yang ingin ditarik.
-•  Penanganan Kesalahan Input:
-•	Jika pengguna memasukkan jumlah penarikan yang tidak valid (misalnya, bukan angka), program akan menampilkan pesan error dan meminta input ulang.
-•  Validasi Penarikan:
-•	Jika jumlah yang dimasukkan kurang dari atau sama dengan nol, program menolak dan meminta ulang input.
-•	Jika jumlah yang diminta lebih besar dari saldo yang tersedia, program menampilkan pesan bahwa saldo tidak mencukupi dan meminta jumlah yang lebih kecil.
-•  Jika jumlah yang diminta valid dan tidak melebihi saldo, maka saldo dikurangi dan penarikan berhasil. Sisa saldo ditampilkan, dan program berhenti.
-3.	Representatif Output
-Contoh Kasus Penggunaan:
-1.	Pengguna diminta untuk memasukkan PIN.
-o	Jika PIN benar, pengguna bisa lanjut ke proses penarikan.
-o	Jika PIN salah 3 kali berturut-turut, akun diblokir, dan program berhenti.
-2.	Setelah PIN benar, pengguna diminta memasukkan jumlah uang yang ingin ditarik.
-o	Jika penarikan lebih besar dari saldo, program menolak dan meminta input yang lebih kecil.
-o	Jika penarikan valid, penarikan dilakukan dan sisa saldo ditampilkan.
-
+- Looping PIN: Program akan meminta pengguna untuk memasukkan PIN hingga PIN yang dimasukkan benar atau hingga kesempatan habis.
+- Jika PIN yang dimasukkan benar, program akan menampilkan pesan "PIN benar" dan keluar dari proses ini.
+- Jika PIN yang dimasukkan salah, jumlah kesempatan akan berkurang, dan pengguna akan diberitahu berapa banyak kesempatan yang tersisa.
+- Jika kesempatan habis (setelah 3 kali percobaan salah), akun akan diblokir, dan program akan berhenti.
+2. Proses Penarikan Uang
+- Looping Penarikan: Setelah PIN benar, program meminta pengguna memasukkan jumlah uang yang ingin ditarik.
+- Penanganan Kesalahan Input:
+- Jika pengguna memasukkan jumlah penarikan yang tidak valid (misalnya, bukan angka), program akan menampilkan pesan error dan meminta input ulang.
+- Validasi Penarikan:
+- Jika jumlah yang dimasukkan kurang dari atau sama dengan nol, program menolak dan meminta ulang input.
+- Jika jumlah yang diminta lebih besar dari saldo yang tersedia, program menampilkan pesan bahwa saldo tidak mencukupi dan meminta jumlah yang lebih kecil.
+- Jika jumlah yang diminta valid dan tidak melebihi saldo, maka saldo dikurangi dan penarikan berhasil. Sisa saldo ditampilkan, dan program berhenti.
+3.	Output
+- Pengguna diminta untuk memasukkan PIN : Jika PIN benar, pengguna bisa lanjut ke proses penarikan dan Jika PIN salah 3 kali berturut-turut, akun diblokir, dan program berhenti.
+- Setelah PIN benar, pengguna diminta memasukkan jumlah uang yang ingin ditarik: Jika penarikan lebih besar dari saldo, program menolak dan meminta input yang lebih kecil dan Jika penarikan valid, penarikan dilakukan dan sisa saldo ditampilkan.
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
