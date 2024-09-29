@@ -31,6 +31,7 @@ Pemilihan  (selection),  yaitu  instruksi  yang dikerjakan berdasarkan kondisi t
 ![image](https://github.com/user-attachments/assets/f22675c5-8d8a-4f3e-b0c1-35f24f18c686)
 
 - sumber : https://repository.penerbiteureka.com/id/publications/560015/fundamental-bahasa-pemrograman-python
+  
 Untuk  memenuhi  kebutuhan  perulangan  perintahpada bahasa  pemrograman  Python.Terdapat  3  pilihanloop.  Secara teknik  fungsionalitas  dasar  3  pilihanloop  ini  adalah  sama, meskipun  sintaks  dan jumlah  waktu  yang  diperlukan  untuk memeriksa kondisinya berbeda.
 
 ### Fungsi (Functions)
