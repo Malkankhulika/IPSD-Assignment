@@ -6,13 +6,47 @@
 Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
 
 # Guided 
-## 1. [Nama Topik]
+## 1. Variabel
 ```python
 nama = "Yanto"
 umur = 38
 print(f"Nama : {nama} \nUmur : {umur}")
 ```
+### Kode Program
+![image](https://github.com/user-attachments/assets/df9ee3dc-6fbe-43f7-b62f-13202488d30d)
 Kode program di atas mendeklarasikan dua variabel, yaitu nama yang menyimpan string "Yanto" dan umur yang menyimpan angka 38. Kemudian, fungsi print() digunakan dengan format string (f-string) untuk mencetak teks yang menyisipkan nilai dari kedua variabel tersebut. Dalam hal ini, {nama} di dalam string akan digantikan oleh nilai "Yanto", dan {umur} akan digantikan oleh nilai 38. Karakter \n berfungsi untuk membuat baris baru sehingga teks "Umur : 38" dicetak di baris selanjutnya. Hasil dari program ini adalah menampilkan informasi nama dan umur secara rapi sebagai output, yaitu: "Nama : Yanto" diikuti dengan "Umur : 38" pada baris berikutnya.
+### Output
+![image](https://github.com/user-attachments/assets/922a46c9-214a-49be-ac9b-710e77dacaad)
+
+## 2. Variabel
+```python
+from math import pi
+
+jari = 8
+luas = pi *jari**2
+keliling = 2*pi*jari
+print(f"Luas Lingkaran : {luas} \nKeliling Lingkaran : {keliling}")
+```
+### Kode Program
+![image](https://github.com/user-attachments/assets/79dfe230-95e7-4620-b8c7-d4958ac1d69a)
+Kode program di atas menghitung luas dan keliling sebuah lingkaran dengan jari-jari 8 menggunakan modul math dari Python untuk mengakses nilai konstanta π (pi). Variabel jari menyimpan nilai 8 sebagai panjang jari-jari lingkaran. Luas lingkaran dihitung dengan rumus π * jari² dan disimpan dalam variabel luas, sedangkan keliling lingkaran dihitung dengan rumus 2 * π * jari dan disimpan dalam variabel keliling. Fungsi print() kemudian mencetak hasil perhitungan luas dan keliling tersebut menggunakan format string (f-string), sehingga outputnya menampilkan luas dan keliling lingkaran dalam dua baris, yaitu "Luas Lingkaran" dan "Keliling Lingkaran".
+### Output
+![image](https://github.com/user-attachments/assets/f54b2d18-af8e-4796-9bbe-3ae767ebf52e)
+
+## 3. Variabel
+```python
+angka = 129
+teks = 'ini angka'
+print(f"Tipe Data Angka : {type(angka)} \nTipe Data Teks : {type(teks)}")
+```
+### Kode Program
+![image](https://github.com/user-attachments/assets/25dd9988-6206-4c1c-80c7-75075c175ae8)
+Kode program di atas mendefinisikan dua variabel, yaitu angka yang menyimpan nilai integer 129 dan teks yang menyimpan string 'ini angka'. Kemudian, fungsi print() digunakan bersama format string (f-string) untuk menampilkan tipe data dari kedua variabel tersebut menggunakan fungsi type(). Fungsi type() mengembalikan tipe data dari objek yang diberikan, dalam hal ini type(angka) akan mengembalikan <class 'int'> untuk tipe integer, dan type(teks) akan mengembalikan <class 'str'> untuk tipe string. Hasilnya, output akan menampilkan tipe data masing-masing variabel dalam dua baris, yaitu "Tipe Data Angka: <class 'int'>" dan "Tipe Data Teks: <class 'str'>".
+### Output
+![image](https://github.com/user-attachments/assets/9dc40e1c-6019-4b48-9620-d07f7da3e797)
+
+
+
 
 # Unguided 
 
