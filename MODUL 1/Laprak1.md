@@ -16,7 +16,7 @@ Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktika
 
 ## Unguided 
 
-### 1. [Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya dan Jumlah angka pada setiap baris bertambah 1, dan bilangan yang ditampilkan adalah bilangan prima.]
+### 1. Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya dan Jumlah angka pada setiap baris bertambah 1, dan bilangan yang ditampilkan adalah bilangan prima.
 ```
 1
 2 3
@@ -68,6 +68,38 @@ Kode di atas menggunakan fungsi is_prime(num) untuk mengecek apakah bilangan ada
 - Baris for i in range(2, int(num**0.5) + 1):: Untuk bilangan num yang lebih besar dari 1, kita melakukan perulangan dari 2 sampai akar kuadrat dari num. Kita hanya perlu memeriksa faktor hingga akar kuadratnya karena faktor di atasnya sudah pasti simetris dengan yang ada di bawah akar kuadrat.
 - Baris if num % i == 0:: Jika ada angka i yang membagi num secara sempurna (tanpa sisa), maka bilangan tersebut bukan bilangan prima, sehingga dikembalikan False.
 - Baris return True:: Jika tidak ada angka yang dapat membagi num, bilangan tersebut adalah bilangan prima, maka fungsi mengembalikan True.
+
+### 2. Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. List baru tersebut juga harus diurutkan secara menurun berdasarkan nilai elemen.
+#### kode program:
+```python
+def ambil_ganjil_dan_urutkan(list1, list2):  
+    # Ambil elemen dengan indeks ganjil dari list1 dan list2
+    ganjil_list1 = [list1[i] for i in range(1, len(list1), 2)]  # Mengambil elemen dengan indeks ganjil dari list1
+    ganjil_list2 = [list2[i] for i in range(1, len(list2), 2)]  # Mengambil elemen dengan indeks ganjil dari lis2
+
+    # Menggabungkan elemen-elemen dari kedua daftar
+    gabungan = ganjil_list1 + ganjil_list2
+
+    # Mengurutkan daftar gabungan secara menurun
+    gabungan.sort(reverse=True)
+
+    return gabungan   # Mengembalikan daftar yang sudah diurutkan
+
+# Contoh penggunaan
+list1 = [10, 21, 32, 43, 54, 65]
+list2 = [11, 22, 33, 44, 55, 66]
+
+hasil = ambil_ganjil_dan_urutkan(list1, list2)
+print(hasil)
+```
+#### penjelasan:
+kode ini membuat Fungsi: ambil_ganjil_dan_urutkan(list1, list2)
+Fungsi ini memiliki dua daftar input, list1 dan list2. Tugas dari fungsi ini adalah:
+- Mengambil elemen-elemen yang berada di indeks ganjil dari kedua daftar.
+- Menggabungkan elemen-elemen tersebut menjadi satu daftar.
+- Mengurutkan hasil gabungan tadi secara menurun (dari yang terbesar ke yang terkecil).
+- Mengembalikan hasil akhir berupa daftar elemen yang sudah diurutkan.
+
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
