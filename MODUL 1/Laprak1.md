@@ -344,6 +344,8 @@ Contoh untuk menghasilkan deret faktorial dari 0 hingga 4: deret_faktorial(4):
 - n = 4 berarti kita ingin menghitung deret faktorial dari 0 hingga 4.
 - Fungsi deret_faktorial(n) akan menghasilkan deret [1, 1, 2, 6, 24], yang kemudian dicetak sebagai string dengan pemisah koma.
 - Program menghasilkan output deret faktorial dari 0 hingga 4
+
+
 ### 7. Buatlah program untuk memecahkan masalah "minimum coin change". Diberikan jumlah uang dan daftar nilai koin yang tersedia (misalnya, 1, 5, 10, 25), tentukan kombinasi minimum koin yang diperlukan untuk mencapai jumlah uang tersebut. Namun, program Anda harus bisa menangani koin-koin yang nilai dan jumlahnya ditentukan pengguna.
 ```python
 def minimum_coin_change(total, koin_tersedia):
@@ -389,37 +391,87 @@ main()
 ![image](https://github.com/user-attachments/assets/6cb3b3b0-b548-48ee-a8c4-51f6c95d1e86)
 
 #### Penjelasan:
-PENJELASAN 
 1.	Mengurutkan koin dari yang terbesar ke terkecil
-•	•  Program mengurutkan nilai koin dari yang terbesar ke yang terkecil, karena dengan menggunakan koin yang lebih besar terlebih dahulu, kita bisa mengurangi jumlah koin yang dibutuhkan.
-•	•  Misalnya, jika kita punya koin 25, 10, dan 1, maka lebih efisien menggunakan koin 25 dulu daripada menggunakan koin 1 atau 10.
-3.	Menginisialisasi variabel hasil dan sisa uang
+- Program mengurutkan nilai koin dari yang terbesar ke yang terkecil, karena dengan menggunakan koin yang lebih besar terlebih dahulu, kita bisa mengurangi jumlah koin yang dibutuhkan.
+- Misalnya, jika kita punya koin 25, 10, dan 1, maka lebih efisien menggunakan koin 25 dulu daripada menggunakan koin 1 atau 10.
+  
+2. Menginisialisasi variabel hasil dan sisa uang
+- hasil adalah dictionary (kamus) yang akan menyimpan berapa banyak setiap jenis koin yang digunakan.
+- sisa_uang adalah variabel yang menyimpan sisa uang yang belum dibayar dengan koin. Pada awalnya, sisa uang sama dengan jumlah uang yang ingin dicapai (total).
 
-•  hasil adalah dictionary (kamus) yang akan menyimpan berapa banyak setiap jenis koin yang digunakan.
-•  sisa_uang adalah variabel yang menyimpan sisa uang yang belum dibayar dengan koin. Pada awalnya, sisa uang sama dengan jumlah uang yang ingin dicapai (total).
+3. Menghitung jumlah koin yang bisa digunakan untuk tiap denominasi
+- Program melakukan iterasi melalui setiap koin dalam koin_tersedia.
+- sisa_uang // koin menghitung berapa banyak koin tersebut yang bisa digunakan. Misalnya, jika kita punya sisa 87 dan koin 25, maka kita bisa menggunakan 3 koin 25 (karena 87//25=387 // 25 = 387//25=3).
+- sisa_uang % koin menghitung sisa uang setelah menggunakan koin tersebut. Misalnya, 87%25=1287 \% 25 = 1287%25=12, jadi setelah menggunakan 3 koin 25, sisa uangnya adalah 12.
+- hasil[koin] = jumlah_koin menyimpan jumlah koin yang digunakan dalam dictionary hasil.
+  
+4. Memeriksa apakah jumlah uang bisa dicapai:
+- Jika setelah semua koin digunakan masih ada sisa uang yang belum bisa dibayar (sisa_uang > 0), program akan menampilkan pesan bahwa jumlah uang tidak bisa dicapai dengan koin yang ada.
 
-4.	Menghitung jumlah koin yang bisa digunakan untuk tiap denominasi
+5. Menampilkan kombinasi koin yang digunakan:
+- Jika sisa_uang menjadi 0 (artinya uang sudah bisa dibayar sepenuhnya dengan koin yang tersedia), program akan menampilkan kombinasi minimum koin yang digunakan.
 
-•	•  Program melakukan iterasi melalui setiap koin dalam koin_tersedia.
-•	sisa_uang // koin menghitung berapa banyak koin tersebut yang bisa digunakan. Misalnya, jika kita punya sisa 87 dan koin 25, maka kita bisa menggunakan 3 koin 25 (karena 87//25=387 // 25 = 387//25=3).
-•	sisa_uang % koin menghitung sisa uang setelah menggunakan koin tersebut. Misalnya, 87%25=1287 \% 25 = 1287%25=12, jadi setelah menggunakan 3 koin 25, sisa uangnya adalah 12.
-•	hasil[koin] = jumlah_koin menyimpan jumlah koin yang digunakan dalam dictionary hasil.
-5.	 Memeriksa apakah jumlah uang bisa dicapai:
-
-•	•  Jika setelah semua koin digunakan masih ada sisa uang yang belum bisa dibayar (sisa_uang > 0), program akan menampilkan pesan bahwa jumlah uang tidak bisa dicapai dengan koin yang ada.
-6.	Menampilkan kombinasi koin yang digunakan:
-
-o	Jika sisa_uang menjadi 0 (artinya uang sudah bisa dibayar sepenuhnya dengan koin yang tersedia), program akan menampilkan kombinasi minimum koin yang digunakan.
-7.	Penjelasan Fungsi main():
-
-1.	Input dari pengguna:
-o	Program meminta pengguna memasukkan jumlah uang yang ingin dicapai dan nilai koin yang tersedia. Pengguna harus memasukkan nilai koin dipisahkan dengan spasi.
-2.	Menangani kesalahan input:
-o	Penggunaan try-except untuk menangani kemungkinan kesalahan input, seperti ketika pengguna memasukkan nilai yang bukan angka. Jika terjadi kesalahan input, program akan menampilkan pesan "Input tidak valid".
+6. Penjelasan Fungsi main():
+- Input dari pengguna: Program meminta pengguna memasukkan jumlah uang yang ingin dicapai dan nilai koin yang tersedia. Pengguna harus memasukkan nilai koin dipisahkan dengan spasi.
+- Menangani kesalahan input: Penggunaan try-except untuk menangani kemungkinan kesalahan input, seperti ketika pengguna memasukkan nilai yang bukan angka. Jika terjadi kesalahan input, program akan menampilkan pesan "Input tidak valid".
+  
 Cara Kerja Program:
 1.	Program meminta pengguna untuk memasukkan jumlah uang dan nilai koin yang tersedia.
 2.	Program akan mencoba mencari kombinasi minimum koin untuk mencapai jumlah uang tersebut.
 3.	Jika jumlah uang bisa dicapai dengan kombinasi koin yang tersedia, program menampilkan kombinasi koin yang digunakan. Jika tidak bisa dicapai, program memberi tahu pengguna bahwa kombinasi koin tidak cukup.
+
+
+### 8. Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. Misalnya:
+```
+Input: "Saya suka Python"
+Output: ["ayaS", "akus", "nohtyP"]
+```
+#### Kode Program:
+```python
+def balik_kata(string):
+    # Memecah string menjadi list kata-kata
+    kata_list = string.split()
+
+    # Membalik setiap kata dan menyimpan dalam list baru
+    kata_terbalik = [kata[::-1] for kata in kata_list]
+
+    return kata_terbalik
+
+# Fungsi utama untuk input dari pengguna
+def main():
+    # Menerima input dari pengguna
+    input_string = input("Masukkan sebuah kalimat: ")
+
+    # Memanggil fungsi untuk membalik kata-kata
+    hasil = balik_kata(input_string)
+
+    # Menampilkan hasil
+    print("Output:", hasil)
+
+# Menjalankan program
+main()
+```
+#### Output:
+![image](https://github.com/user-attachments/assets/fb5c0440-29cf-40e7-b9be-b4c90134e863)
+
+#### Penjelaan:
+Fungsi balik_kata(string):
+1.	Memecah kalimat menjadi list kata-kata:
+- string.split() memisahkan kalimat berdasarkan spasi dan mengubahnya menjadi list yang berisi kata-kata. Misalnya, jika input kalimatnya adalah "Halo dunia", maka kata_list akan berisi ["Halo", "dunia"].
+2.	Membalik setiap kata:
+- Kode ini menggunakan list comprehension untuk membalik setiap kata yang ada di dalam kata_list. kata[::-1] adalah cara untuk membalik urutan karakter dalam string. Sebagai contoh, "Halo" menjadi "olaH", dan "dunia" menjadi "ainud".
+List comprehension ini menghasilkan list baru, yaitu kata_terbalik, yang berisi kata-kata yang sudah dibalik.
+3.	Mengembalikan hasil:
+- Fungsi ini mengembalikan list kata-kata yang sudah dibalik.
+
+Penjelasan Fungsi main():
+1.	Menerima input dari pengguna: Program meminta pengguna memasukkan sebuah kalimat, dan hasil input disimpan dalam variabel input_string.
+2.	Memanggil fungsi balik_kata:
+- Program memanggil fungsi balik_kata() dengan parameter input_string (kalimat yang dimasukkan pengguna).
+- Fungsi ini akan mengembalikan list yang berisi kata-kata yang sudah dibalik.
+3.	Menampilkan hasil:
+Program menampilkan hasil, yaitu list dari kata-kata yang sudah dibalik.
+
 
 
 ## Kesimpulan
