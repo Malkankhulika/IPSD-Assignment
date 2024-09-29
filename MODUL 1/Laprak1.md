@@ -6,13 +6,13 @@
 Berikan penjelasan teori terkait materi modul ini dengan bahasa anda sendiri serta susunan yang terstruktur per topiknya.
 
 # Guided 
-
 ## 1. [Nama Topik]
-
 ```python
-print("ini adalah file code guided praktikan")
+nama = "Yanto"
+umur = 38
+print(f"Nama : {nama} \nUmur : {umur}")
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function print untuk mengeksekusi nya.
+Kode program di atas mendeklarasikan dua variabel, yaitu nama yang menyimpan string "Yanto" dan umur yang menyimpan angka 38. Kemudian, fungsi print() digunakan dengan format string (f-string) untuk mencetak teks yang menyisipkan nilai dari kedua variabel tersebut. Dalam hal ini, {nama} di dalam string akan digantikan oleh nilai "Yanto", dan {umur} akan digantikan oleh nilai 38. Karakter \n berfungsi untuk membuat baris baru sehingga teks "Umur : 38" dicetak di baris selanjutnya. Hasil dari program ini adalah menampilkan informasi nama dan umur secara rapi sebagai output, yaitu: "Nama : Yanto" diikuti dengan "Umur : 38" pada baris berikutnya.
 
 # Unguided 
 
