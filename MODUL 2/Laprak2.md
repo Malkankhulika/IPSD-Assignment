@@ -1,7 +1,7 @@
-<h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
+<h1 align="center">Laporan Praktikum Modul Preprocessing</h1>
 <p align="center">Khulika Malkan</p>
 <p align="center">2311110057</p>
-<p align="center">S1SD0-02</p>
+<p align="center">S1SD04-02</p>
 
 ## Dasar Teori
 Python  adalah  bahasa  pemrograman  yang  menggunakan  interpreter untuk     menjalankan     kode     programnya.     Interpreter     tersebut     dapat menerjemahkan  kode  secara  langsung,  dan  Python  dapat  dijalankan  di berbagai platform seperti Windows, Linux, dan lain-lain. Pythonmengadopsi paradigma  pemrograman  dari  beberapa  bahasa  lain,  termasuk  paradigma pemrograman  prosedural  seperti  bahasa  C,  pemrograman  berorientasi  objek seperti  Java,  dan  bahasa  fungsional  seperti  Lisp.  Kombinasi  paradigma  ini memudahkan  para  programmer  dalam  mengembangkan  berbagai  proyek menggunakan Python [1].
@@ -30,63 +30,7 @@ Pemilihan  (selection),  yaitu  instruksi  yang dikerjakan berdasarkan kondisi t
 
   
 ### Perulangan (Loops)
-![image](https://github.com/user-attachments/assets/f22675c5-8d8a-4f3e-b0c1-35f24f18c686)
 
-- sumber : https://repository.penerbiteureka.com/id/publications/560015/fundamental-bahasa-pemrograman-python
-  
-Untuk  memenuhi  kebutuhan  perulangan  perintahpada bahasa  pemrograman  Python.Terdapat  3  pilihanloop.  Secara teknik  fungsionalitas  dasar  3  pilihanloop  ini  adalah  sama, meskipun  sintaks  dan jumlah  waktu  yang  diperlukan  untuk memeriksa kondisinya berbeda.
-
-### Fungsi (Functions)
-Fungsi (functions) dalam Python adalah blok kode yang dirancang untuk menjalankan tugas tertentu dan dapat dipanggil berulang kali. Fungsi digunakan untuk mengorganisasi kode agar lebih modular, mudah dipelihara, dan dapat digunakan kembali. Fungsi didefinisikan menggunakan kata kunci def diikuti dengan nama fungsi, tanda kurung (), dan tanda titik dua :. Di dalam tanda kurung, fungsi dapat menerima argumen, dan setelahnya diikuti oleh blok kode yang menjadi isi fungsi. 
-
-### List dan Tuple
-- List adalah seperti daftar yang fleksibel. Kamu bisa menambah, menghapus, atau mengganti item sesukamu. Misalnya, saat kamu pergi ke pasar dan teringat butuh membeli telur selain apel dan pisang, kamu bisa dengan mudah menambahkannya ke dalam List. List didefinisikan dengan menggunakan tanda kurung siku [], dan di dalamnya kamu bisa menyimpan berbagai macam jenis data seperti angka, teks, atau bahkan List lain.
-- Tuple, di sisi lain, adalah seperti daftar yang tidak bisa diubah. Setelah kamu membuatnya, kamu tidak bisa menambah, menghapus, atau mengganti item di dalamnya. Bayangkan kamu punya daftar hari dalam seminggu: hari Senin sampai Minggu tidak pernah berubah, jadi kamu bisa menggunakan Tuple. Ini membantu memastikan bahwa data tersebut tetap sama dan tidak ada yang bisa mengubahnya tanpa disengaja. Tuple didefinisikan dengan tanda kurung biasa ().
-
-### Dictionary
-Dictionary dalam Python adalah struktur data yang digunakan untuk menyimpan pasangan kunci (key) dan nilai (value). Setiap item dalam dictionary terdiri dari dua bagian: kunci dan nilai yang terkait dengan kunci tersebut. Dictionary sangat berguna saat kamu ingin mengaitkan satu data dengan data lainnya, mirip seperti kamus yang menghubungkan kata (kunci) dengan definisinya (nilai).
-
-### Set
-Set dalam Python adalah tipe data yang digunakan untuk menyimpan sekumpulan item yang unik dan tidak berurutan. Set mirip dengan himpunan dalam matematika, di mana setiap elemen hanya muncul satu kali dan urutannya tidak penting. Set sangat berguna jika kamu ingin menyimpan data tanpa duplikasi dan tidak peduli dengan urutannya.
-
-### File Handling
-File Handling dalam Python adalah cara untuk membaca dari, menulis ke, dan memanipulasi file yang tersimpan di komputer. File handling memungkinkan kita menyimpan data secara permanen dan mengaksesnya kembali di kemudian hari. Python menyediakan fungsi-fungsi bawaan untuk bekerja dengan file, sehingga kita dapat membuka, membaca, menulis, dan menutup file dengan mudah.
-
-### List Comprehension
-List Comprehension dalam Python adalah untuk membuat atau memodifikasi list. List comprehension memungkinkan kita untuk menulis loop dan kondisi untuk menghasilkan list baru dalam satu baris kode, menjadikannya lebih ringkas dan mudah dibaca dibandingkan dengan cara tradisional menggunakan loop for.
-
-### Exception Handling
-Exception Handling dalam Python adalah mekanisme untuk menangani kesalahan atau exception yang terjadi saat program dijalankan. Exception adalah situasi di mana ada sesuatu yang salah saat program dijalankan, seperti pembagian dengan nol, mencoba membuka file yang tidak ada, atau mengakses indeks list yang tidak valid. Dengan exception handling, kamu dapat menangkap dan menangani kesalahan ini sehingga program tidak berhenti secara tiba-tiba dan dapat terus berjalan atau memberikan pesan error yang lebih informatif.
-
-### OOP (Object-Oriented Programming)
-OOP (Object-Oriented Programming) atau Pemrograman Berbasis Objek adalah paradigma pemrograman yang berfokus pada objek dan penggunaan konsep seperti kelas (class), objek (object), pewarisan (inheritance), enkapsulasi (encapsulation), dan polimorfisme (polymorphism) untuk membangun program. Dalam OOP, data dan fungsi yang memanipulasi data dikelompokkan bersama dalam unit yang disebut objek, yang dibuat berdasarkan blueprint yang disebut kelas.
-
-
-
-### Modules dan Packages
-Modules dan Packages dalam Python adalah cara untuk mengorganisir dan mengelola kode, memungkinkan pengembang untuk membuat aplikasi yang lebih besar dan terstruktur dengan baik. Modul adalah file Python yang berisi kode, seperti fungsi, kelas, dan variabel, yang dapat digunakan kembali di program lain. Modul membantu dalam menyusun kode agar lebih terorganisir dan lebih mudah dibaca. Untuk membuat modul, cukup buat file dengan ekstensi .py. Misalnya, jika kamu memiliki file bernama matematika.py, maka ini adalah modul yang berisi fungsi-fungsi matematika.
-
-### Lambda dan Higher-Order Functions
-Lambda Functions dan Higher-Order Functions adalah dua konsep penting dalam pemrograman fungsional di Python. Keduanya memungkinkan kamu untuk menulis kode yang lebih ringkas, efisien, dan fleksibel. 
-- Lambda Functions: fungsi anonim (tanpa nama) yang didefinisikan dengan menggunakan kata kunci lambda. Fungsi ini biasanya digunakan untuk menulis fungsi kecil yang hanya digunakan sekali atau untuk fungsi yang tidak memerlukan penamaan.
-- Higher-Order Functions: fungsi yang dapat menerima fungsi lain sebagai argumen atau mengembalikan fungsi sebagai hasil. Ini memungkinkan kamu untuk membuat fungsi yang lebih fleksibel dan dapat digunakan kembali.
-
-
-### Miscellaneous
-Dalam konteks pemrograman Python, miscellaneous mengacu pada berbagai topik atau konsep yang tidak termasuk dalam kategori utama seperti tipe data, kontrol alur, atau pemrograman berorientasi objek, tetapi tetap penting untuk dipahami. Berikut adalah beberapa topik miscellaneous yang sering ditemui dalam pemrograman Python:
-- List Comprehensions: adalah cara singkat untuk membuat list baru dengan cara yang lebih elegan. Ini adalah sintaks yang lebih ringkas dibandingkan menggunakan loop untuk menambahkan elemen ke dalam list.
-- Fungsi Built-in Python memiliki banyak fungsi built-in yang dapat digunakan langsung tanpa perlu mendefinisikannya. Beberapa contoh fungsi built-in adalah:
-  - len(): Menghitung panjang suatu objek.
-  - sum(): Menjumlahkan semua elemen dalam iterable.
-  - max(): Mengembalikan nilai maksimum dari iterable.
-- Exception Handling: memungkinkan program untuk menangani kesalahan yang terjadi saat runtime. Dengan menggunakan try, except, else, dan finally, kita dapat menangani situasi tak terduga tanpa menghentikan eksekusi program.
-- Decorators: cara untuk memodifikasi atau meningkatkan fungsi atau metode tanpa mengubah strukturnya. Ini sangat berguna untuk menambah fungsionalitas seperti logging, akses kontrol, dan caching.
-- Generators: cara untuk membuat iterator dengan menggunakan yield. Fungsi generator akan mengembalikan nilai satu per satu, memungkinkan penggunaan memori yang lebih efisien.
-- Modul dan Paket: adalah file Python yang berisi definisi fungsi dan variabel, sedangkan paket adalah kumpulan modul dalam direktori. Modul dan paket membantu dalam mengorganisir kode.
-- Context Managers: digunakan untuk mengelola sumber daya seperti file, memastikan bahwa sumber daya dibersihkan dengan benar setelah digunakan. Hal ini sering dilakukan menggunakan with statement.
-- Type hinting memperkenalkan anotasi tipe pada fungsi dan variabel, membantu dalam dokumentasi dan pemeriksaan tipe.
-- F-strings adalah cara untuk melakukan interpolasi string yang lebih mudah dan lebih cepat menggunakan awalan f sebelum string.
-- List, Set, dan Dictionary Comprehensions Seperti list comprehensions, kita juga dapat membuat set dan dictionary dengan cara yang mirip.
 
 # Guided 
 ## 1. Variabel
