@@ -1,10 +1,20 @@
-<h1 align="center">Laporan Praktikum Modul Preprocessing</h1>
+<h1 align="center">Laporan Praktikum Modul EDA/Preprocessing</h1>
 <p align="center">Khulika Malkan</p>
 <p align="center">2311110057</p>
 <p align="center">S1SD04-02</p>
 
 ## Dasar Teori
 Tahapan pertama dalam proses machine learning adalah eksplorasi data. Eksplorasi data merupakan proses pemahaman terhadap data yang akan dianalisis. Dengan mengeksplorasi data terlebih dahulu, kita dapat menentukan teknik mana yang akan digunakan. Dibawah ini adalah contoh eksplorasi data dengan memahami statistika deskriptif dari data [1].
+
+### EDA
+“Exploratory Data Analysis (EDA) is an approach/philosophy for data analysis that employs a variety of techniques (mostly graphical) to maximize insight into a data set”
+Analisis Data Eksploratif (EDA) adalah pendekatan/filosofi untuk analisis data yang menggunakan berbagai teknik (sebagian besar berupa grafis) untuk memaksimalkan wawasan terhadap sebuah dataset, dengan:
+- 1.mengungkap struktur dasar;
+- 2.mengekstraksi variabel penting;
+- 3.mendeteksi outlier dan anomali;
+- 4.test underlying assumptions (menguji asumsi-asumsi yang mendasar;
+- 5.mengembangkan model-model yang sederhana
+- 6.Menentukan setting faktor yang optimal.
 
 ### Preprocessing Data - Missing Value
 Setelah proses eksplorasi data,langkah selanjutnya yang dilakukan adalah proses data pre processing. Dalam tahapan ini kita akan menangani data dengan memeriksa apakah ada missing value pada data yang akan dianalisis [2].
