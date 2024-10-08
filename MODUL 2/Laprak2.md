@@ -7,7 +7,7 @@
 Tahapan pertama dalam proses machine learning adalah eksplorasi data. Eksplorasi data merupakan proses pemahaman terhadap data yang akan dianalisis. Dengan mengeksplorasi data terlebih dahulu, kita dapat menentukan teknik mana yang akan digunakan. Dibawah ini adalah contoh eksplorasi data dengan memahami statistika deskriptif dari data [1].
 
 ### Preprocessing Data - Missing Value
-iadaan nilai.Setelah proses eksplorasi data,langkah selanjutnya yang dilakukan adalah proses data pre processing. Dalam tahapan ini kita akan menangani data dengan memeriksa apakah ada missing value pada data yang akan dianalisis [2].
+Setelah proses eksplorasi data,langkah selanjutnya yang dilakukan adalah proses data pre processing. Dalam tahapan ini kita akan menangani data dengan memeriksa apakah ada missing value pada data yang akan dianalisis [2].
 
 ### Preprocessing Data - Scaling
 Setelah memahami missing value dan berhasil mengatasinya, selanjutnya adalah proses scaling atau biasa dikenal dengan normalisasi. Ada kalanya data yang dimiliki memiliki rentang yang cukup jauh satu sama lain sehingga perlu dinormalisasi.
