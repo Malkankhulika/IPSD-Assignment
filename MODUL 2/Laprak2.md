@@ -69,11 +69,11 @@ film.info()
 - 1. Fungsi: Menampilkan beberapa baris pertama dari DataFrame (secara default 5 baris).
   2. Tujuan: Untuk memberikan gambaran awal tentang struktur data, kolom yang ada, dan beberapa contoh nilai.
 2. film.describe()
--- Fungsi: Menghasilkan statistik ringkasan untuk kolom numerik dalam DataFrame.
--- Tujuan: Untuk memahami distribusi data, seperti mean, median, minimum, maksimum, dan quartiles. Ini membantu Anda mengevaluasi rentang nilai dan potensi outlier.
+- 1. Fungsi: Menghasilkan statistik ringkasan untuk kolom numerik dalam DataFrame.
+  2. Tujuan: Untuk memahami distribusi data, seperti mean, median, minimum, maksimum, dan quartiles. Ini membantu Anda mengevaluasi rentang nilai dan potensi outlier.
 3. film.info()
--- Fungsi: Menampilkan informasi tentang DataFrame, termasuk jumlah total entri, nama kolom, tipe data, dan jumlah nilai non-null untuk setiap kolom.
--- Tujuan: Untuk memahami jenis data yang ada (misalnya, numerik, kategori) serta memeriksa adanya nilai yang hilang (missing values). Ini penting untuk merencanakan langkah-langkah pembersihan data yang diperlukan.
+ 1. Fungsi: Menampilkan informasi tentang DataFrame, termasuk jumlah total entri, nama kolom, tipe data, dan jumlah nilai non-null untuk setiap kolom.
+  2. Tujuan: Untuk memahami jenis data yang ada (misalnya, numerik, kategori) serta memeriksa adanya nilai yang hilang (missing values). Ini penting untuk merencanakan langkah-langkah pembersihan data yang diperlukan.
 
 
 ## 4. Data Cleaning: Penanganan missing values, duplicate records, dan outliers . Pandas menyediakan metode seperti dropna(), fillna(), dan drop_duplicates() untuk data cleaning.  
