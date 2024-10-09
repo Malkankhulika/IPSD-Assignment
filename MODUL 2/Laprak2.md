@@ -7,7 +7,7 @@
 Tahapan pertama dalam proses machine learning adalah eksplorasi data. Eksplorasi data merupakan proses pemahaman terhadap data yang akan dianalisis. Dengan mengeksplorasi data terlebih dahulu, kita dapat menentukan teknik mana yang akan digunakan. Dibawah ini adalah contoh eksplorasi data dengan memahami statistika deskriptif dari data [1].
 
 ### EDA
-“Exploratory Data Analysis (EDA) is an approach/philosophy for data analysis that employs a variety of techniques (mostly graphical) to maximize insight into a data set”
+“Exploratory Data Analysis (EDA) is an approach/philosophy for data analysis that employs a variety of techniques (mostly graphical) to maximize insight into a data set” [2]
 Analisis Data Eksploratif (EDA) adalah pendekatan/filosofi untuk analisis data yang menggunakan berbagai teknik (sebagian besar berupa grafis) untuk memaksimalkan wawasan terhadap sebuah dataset, dengan:
 - 1.mengungkap struktur dasar;
 - 2.mengekstraksi variabel penting;
@@ -17,7 +17,7 @@ Analisis Data Eksploratif (EDA) adalah pendekatan/filosofi untuk analisis data y
 - 6.Menentukan setting faktor yang optimal.
 
 ### Preprocessing Data - Missing Value
-Setelah proses eksplorasi data,langkah selanjutnya yang dilakukan adalah proses data pre processing. Dalam tahapan ini kita akan menangani data dengan memeriksa apakah ada missing value pada data yang akan dianalisis [2].
+Setelah proses eksplorasi data,langkah selanjutnya yang dilakukan adalah proses data pre processing. Dalam tahapan ini kita akan menangani data dengan memeriksa apakah ada missing value pada data yang akan dianalisis [3].
 
 ### Preprocessing Data - Scaling
 Setelah memahami missing value dan berhasil mengatasinya, selanjutnya adalah proses scaling atau biasa dikenal dengan normalisasi. Ada kalanya data yang dimiliki memiliki rentang yang cukup jauh satu sama lain sehingga perlu dinormalisasi.
@@ -65,13 +65,13 @@ film.info()
 
 
 ### Penjelasan:
-- a.film.head()
--- Fungsi: Menampilkan beberapa baris pertama dari DataFrame (secara default 5 baris).
--- Tujuan: Untuk memberikan gambaran awal tentang struktur data, kolom yang ada, dan beberapa contoh nilai.
-- b.film.describe()
+1. film.head()
+- 1. Fungsi: Menampilkan beberapa baris pertama dari DataFrame (secara default 5 baris).
+  2. Tujuan: Untuk memberikan gambaran awal tentang struktur data, kolom yang ada, dan beberapa contoh nilai.
+2. film.describe()
 -- Fungsi: Menghasilkan statistik ringkasan untuk kolom numerik dalam DataFrame.
 -- Tujuan: Untuk memahami distribusi data, seperti mean, median, minimum, maksimum, dan quartiles. Ini membantu Anda mengevaluasi rentang nilai dan potensi outlier.
-- c.film.info()
+3. film.info()
 -- Fungsi: Menampilkan informasi tentang DataFrame, termasuk jumlah total entri, nama kolom, tipe data, dan jumlah nilai non-null untuk setiap kolom.
 -- Tujuan: Untuk memahami jenis data yang ada (misalnya, numerik, kategori) serta memeriksa adanya nilai yang hilang (missing values). Ini penting untuk merencanakan langkah-langkah pembersihan data yang diperlukan.
 
@@ -103,4 +103,6 @@ Dari pembelajaran Preprocessing data dalam bahasa pemrograman Python adalah lang
 ## Referensi
 [1] Famili, A., Shen, W. M., Weber, R., & Simoudis, E. (1997). Data preprocessing and intelligent data analysis. Intelligent data analysis, 1(1), 3-23. 
 
-[2] https://dqlab.id/preprocessing-data-pada-machine-learning-python
+[2] Infrastruktur dan Platform Sains Data/ PERTEMUAN 2 Exploratory Data Analysis (https://lms.telkomuniversity.ac.id/pluginfile.php/5879110/mod_resource/content/1/M2_%20UFI_EDA.pdf)
+
+[3] https://dqlab.id/preprocessing-data-pada-machine-learning-python
