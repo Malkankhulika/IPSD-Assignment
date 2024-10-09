@@ -9,12 +9,12 @@ Tahapan pertama dalam proses machine learning adalah eksplorasi data. Eksplorasi
 ### EDA
 “Exploratory Data Analysis (EDA) is an approach/philosophy for data analysis that employs a variety of techniques (mostly graphical) to maximize insight into a data set”
 Analisis Data Eksploratif (EDA) adalah pendekatan/filosofi untuk analisis data yang menggunakan berbagai teknik (sebagian besar berupa grafis) untuk memaksimalkan wawasan terhadap sebuah dataset, dengan:
-- 1. mengungkap struktur dasar;
-- 2. mengekstraksi variabel penting;
-- 3. mendeteksi outlier dan anomali;
-- 4. test underlying assumptions (menguji asumsi-asumsi yang mendasar;
-- 5. mengembangkan model-model yang sederhana
-- 6. Menentukan setting faktor yang optimal.
+- 1.mengungkap struktur dasar;
+- 2.mengekstraksi variabel penting;
+- 3.mendeteksi outlier dan anomali;
+- 4.test underlying assumptions (menguji asumsi-asumsi yang mendasar;
+- 5.mengembangkan model-model yang sederhana
+- 6.Menentukan setting faktor yang optimal.
 
 ### Preprocessing Data - Missing Value
 Setelah proses eksplorasi data,langkah selanjutnya yang dilakukan adalah proses data pre processing. Dalam tahapan ini kita akan menangani data dengan memeriksa apakah ada missing value pada data yang akan dianalisis [2].
@@ -34,8 +34,8 @@ import numpy as np
 ### code:
 ![image](https://github.com/user-attachments/assets/5c0ebed3-6759-4583-ae18-69195a9b42c1)
 
-
 ### Penjelasan:
+Dalam Python, import pandas as pd dan import numpy as np digunakan untuk mengimpor dua pustaka (library) yang digunakan untuk analisis data dan komputasi numerik.
 
 ## 2. Load Data: Read data set pada pandas DataFrame menggunakan pd.read_csv() atau pd.read_excel() 
 ### Kode Program:
@@ -46,6 +46,7 @@ film = pd.read_csv("movie_classification.csv")
 ![image](https://github.com/user-attachments/assets/619a80ef-747d-43ab-a888-66999442a769)
 
 ### Penjelasan:
+Untuk memuat dataset ke dalam DataFrame menggunakan pandas, menggunakan pd.read_csv() untuk membaca file CSV atau pd.read_excel() untuk membaca file Excel.
 
 ## 3. Data Overview: Memahami data melalui examinasi basic properties  
 ### Kode Program:
@@ -64,6 +65,15 @@ film.info()
 
 
 ### Penjelasan:
+- a.film.head()
+-- Fungsi: Menampilkan beberapa baris pertama dari DataFrame (secara default 5 baris).
+-- Tujuan: Untuk memberikan gambaran awal tentang struktur data, kolom yang ada, dan beberapa contoh nilai.
+- b.film.describe()
+-- Fungsi: Menghasilkan statistik ringkasan untuk kolom numerik dalam DataFrame.
+-- Tujuan: Untuk memahami distribusi data, seperti mean, median, minimum, maksimum, dan quartiles. Ini membantu Anda mengevaluasi rentang nilai dan potensi outlier.
+- c.film.info()
+-- Fungsi: Menampilkan informasi tentang DataFrame, termasuk jumlah total entri, nama kolom, tipe data, dan jumlah nilai non-null untuk setiap kolom.
+-- Tujuan: Untuk memahami jenis data yang ada (misalnya, numerik, kategori) serta memeriksa adanya nilai yang hilang (missing values). Ini penting untuk merencanakan langkah-langkah pembersihan data yang diperlukan.
 
 
 ## 4. Data Cleaning: Penanganan missing values, duplicate records, dan outliers . Pandas menyediakan metode seperti dropna(), fillna(), dan drop_duplicates() untuk data cleaning.  
@@ -80,9 +90,11 @@ film.drop_duplicates(inplace=True)
 ### code:
 ![image](https://github.com/user-attachments/assets/4eb93297-31fb-4428-9948-eabca4543076)
 
-
-
 ### Penjelasan:
+- a.Menangani Missing Values
+Missing values dapat memengaruhi analisis dan hasil model. Oleh karenanya perlu dilakukan penghapusan baris dengan menggunakan missing value
+- b.Menghapus Duplikasi
+Duplikat dalam dataset dapat menyebabkan bias dalam analisis.
 
 # Kesimpulan
 Dari pembelajaran Preprocessing data dalam bahasa pemrograman Python adalah langkah penting yang memastikan data siap untuk analisis dan pemodelan. Proses ini melibatkan pembersihan data dari nilai hilang dan duplikasi, serta transformasi data seperti normalisasi dan encoding kategori. Python menawarkan berbagai library, seperti Pandas untuk manipulasi data dan Scikit-learn untuk teknik preprocessing, yang memudahkan kita dalam melakukan tugas ini. Dengan melakukan preprocessing yang tepat, kita dapat meningkatkan akurasi dan keandalan model machine learning. Penting untuk menyesuaikan proses ini dengan karakteristik dataset dan tujuan analisis, sehingga hasil yang diperoleh menjadi lebih optimal.
