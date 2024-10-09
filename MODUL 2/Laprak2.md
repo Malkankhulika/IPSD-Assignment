@@ -9,12 +9,12 @@ Tahapan pertama dalam proses machine learning adalah eksplorasi data. Eksplorasi
 ### EDA
 “Exploratory Data Analysis (EDA) is an approach/philosophy for data analysis that employs a variety of techniques (mostly graphical) to maximize insight into a data set”
 Analisis Data Eksploratif (EDA) adalah pendekatan/filosofi untuk analisis data yang menggunakan berbagai teknik (sebagian besar berupa grafis) untuk memaksimalkan wawasan terhadap sebuah dataset, dengan:
-- 1.mengungkap struktur dasar;
-- 2.mengekstraksi variabel penting;
-- 3.mendeteksi outlier dan anomali;
-- 4.test underlying assumptions (menguji asumsi-asumsi yang mendasar;
-- 5.mengembangkan model-model yang sederhana
-- 6.Menentukan setting faktor yang optimal.
+- 1. mengungkap struktur dasar;
+- 2. mengekstraksi variabel penting;
+- 3. mendeteksi outlier dan anomali;
+- 4. test underlying assumptions (menguji asumsi-asumsi yang mendasar;
+- 5. mengembangkan model-model yang sederhana
+- 6. Menentukan setting faktor yang optimal.
 
 ### Preprocessing Data - Missing Value
 Setelah proses eksplorasi data,langkah selanjutnya yang dilakukan adalah proses data pre processing. Dalam tahapan ini kita akan menangani data dengan memeriksa apakah ada missing value pada data yang akan dianalisis [2].
@@ -24,18 +24,65 @@ Setelah memahami missing value dan berhasil mengatasinya, selanjutnya adalah pro
 
 Normalisasi data ini membutuhkan nilai minimum dan maksimum. Nilai minimum yang biasa digunakan adalah 0 dan nilai maksimum adalah 1. Sehingga, data memiliki rentang 0 sampai 1. Preprocessing data merupakan tahapan penting dalam analisis data. Dengan proses tersebut, data yang akan dianalisis akan lebih siap sehingga hasilnya pun lebih akurat. 
 
-
-# Unguided 
-## 1. Load data (movie classification)
+# Langkah-langkah umum EDA pada Python
+## 1.  Import Libraries:
 ### Kode Program:
 ```python
-
+import pandas as pd
+import numpy as np
 ```
-### Output:
+### code:
+![image](https://github.com/user-attachments/assets/5c0ebed3-6759-4583-ae18-69195a9b42c1)
+
+
+### Penjelasan:
+
+## 2. Load Data: Read data set pada pandas DataFrame menggunakan pd.read_csv() atau pd.read_excel() 
+### Kode Program:
+```python
+film = pd.read_csv("movie_classification.csv")
+```
+### code:
+![image](https://github.com/user-attachments/assets/619a80ef-747d-43ab-a888-66999442a769)
+
+### Penjelasan:
+
+## 3. Data Overview: Memahami data melalui examinasi basic properties  
+### Kode Program:
+```python
+# Display the first few rows of the DataFrame
+film.head()
+
+# Get summary statistics of numerical columns
+film.describe()
+
+# Check data types and missing values
+film.info()
+```
+### code:
+![image](https://github.com/user-attachments/assets/5b94979f-d920-4933-8a7d-6cd7dee13088)
+
 
 ### Penjelasan:
 
 
+## 4. Data Cleaning: Penanganan missing values, duplicate records, dan outliers . Pandas menyediakan metode seperti dropna(), fillna(), dan drop_duplicates() untuk data cleaning.  
+### Kode Program:
+```python
+# Remove rows with missing values
+movie.dropna(inplace=True)
+
+# Remove duplicate rows
+film.drop_duplicates(inplace=True)
+
+# Hndle outliers if needed
+```
+### code:
+![image](https://github.com/user-attachments/assets/4eb93297-31fb-4428-9948-eabca4543076)
+
+
+
+### Penjelasan:
 
 # Kesimpulan
 Dari pembelajaran Preprocessing data dalam bahasa pemrograman Python adalah langkah penting yang memastikan data siap untuk analisis dan pemodelan. Proses ini melibatkan pembersihan data dari nilai hilang dan duplikasi, serta transformasi data seperti normalisasi dan encoding kategori. Python menawarkan berbagai library, seperti Pandas untuk manipulasi data dan Scikit-learn untuk teknik preprocessing, yang memudahkan kita dalam melakukan tugas ini. Dengan melakukan preprocessing yang tepat, kita dapat meningkatkan akurasi dan keandalan model machine learning. Penting untuk menyesuaikan proses ini dengan karakteristik dataset dan tujuan analisis, sehingga hasil yang diperoleh menjadi lebih optimal.
