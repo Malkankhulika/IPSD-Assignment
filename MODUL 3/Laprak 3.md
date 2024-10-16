@@ -1,4 +1,4 @@
-<h1 align="center">Laporan Praktikum Modul EDA/Preprocessing</h1>
+![image](https://github.com/user-attachments/assets/535bdb5e-4406-4ebf-9144-6a4166cc3340)<h1 align="center">Laporan Praktikum Modul EDA/Preprocessing</h1>
 <p align="center">Khulika Malkan</p>
 <p align="center">2311110057</p>
 <p align="center">S1SD04-02</p>
@@ -28,73 +28,103 @@ Normalisasi data ini membutuhkan nilai minimum dan maksimum. Nilai minimum yang 
 ## 1.  Import Libraries:
 ### Kode Program:
 ```python
-import pandas as pd
-import numpy as np
+!pip install pandas
+!pip install numpy
+!pip install seaborn
+!pip install matplotib.pyplot
+!pip install openpyxl
+!pip install wordcloud
+!pip install imblearn
+!pip install scikit-learn
+!pip install sklearn
 ```
 ### code:
-![image](https://github.com/user-attachments/assets/5c0ebed3-6759-4583-ae18-69195a9b42c1)
+![image](https://github.com/user-attachments/assets/7c218950-23f4-4de7-8327-02cf0988f9fc)
 
 ### Penjelasan:
-Dalam Python, import pandas as pd dan import numpy as np digunakan untuk mengimpor dua pustaka (library) yang digunakan untuk analisis data dan komputasi numerik.
+- pandas: Library untuk manipulasi dan analisis data, menyediakan struktur data seperti DataFrame untuk memudahkan pengolahan data tabular.
+- numpy: Library untuk komputasi numerik, menyediakan array multidimensi dan fungsi-fungsi matematika untuk operasi pada array tersebut.
+- seaborn: Library untuk visualisasi data.
+- matplotlib.pyplot: Modul dari matplotlib yang digunakan untuk membuat grafik dan plot secara interaktif.
+- openpyxl: Library untuk membaca dan menulis file Excel dengan format .xlsx.
+- wordcloud: Library untuk membuat visualisasi cloud kata dari teks, menunjukkan frekuensi kata dalam bentuk grafik.
+- imblearn: Library untuk menangani ketidakseimbangan kelas dalam dataset, menyediakan metode untuk oversampling dan undersampling.
+- scikit-learn: Library untuk machine learning, menyediakan berbagai algoritma dan tools untuk klasifikasi, regresi, dan clustering.
+- sklearn: Digunakan untuk import library yang sama.
 
-## 2. Load Data: Read data set pada pandas DataFrame menggunakan pd.read_csv() atau pd.read_excel() 
+## 2. Load Data: Read data set pada pandas DataFrame menggunakan pd.read_csv()
 ### Kode Program:
 ```python
-film = pd.read_csv("movie_classification.csv")
+db = pd.read_csv ("diabetes.csv")
+db
 ```
 ### code:
-![image](https://github.com/user-attachments/assets/619a80ef-747d-43ab-a888-66999442a769)
-
-### Penjelasan:
-Untuk memuat dataset ke dalam DataFrame menggunakan pandas, menggunakan pd.read_csv() untuk membaca file CSV atau pd.read_excel() untuk membaca file Excel.
-
-## 3. Data Overview: Memahami data melalui examinasi basic properties  
-### Kode Program:
-```python
-# Display the first few rows of the DataFrame
-film.head()
-
-# Get summary statistics of numerical columns
-film.describe()
-
-# Check data types and missing values
-film.info()
-```
-### code:
-![image](https://github.com/user-attachments/assets/5b94979f-d920-4933-8a7d-6cd7dee13088)
+![image](https://github.com/user-attachments/assets/4cea8b5a-66bb-432c-9577-ce6291181fd6)
 
 
 ### Penjelasan:
-1. film.head()
-- 1. Fungsi: Menampilkan beberapa baris pertama dari DataFrame (secara default 5 baris).
-  2. Tujuan: Untuk memberikan gambaran awal tentang struktur data, kolom yang ada, dan beberapa contoh nilai.
-2. film.describe()
-- 1. Fungsi: Menghasilkan statistik ringkasan untuk kolom numerik dalam DataFrame.
-  2. Tujuan: Untuk memahami distribusi data, seperti mean, median, minimum, maksimum, dan quartiles. Ini membantu Anda mengevaluasi rentang nilai dan potensi outlier.
-3. film.info()
-- 1. Fungsi: Menampilkan informasi tentang DataFrame, termasuk jumlah total entri, nama kolom, tipe data, dan jumlah nilai non-null untuk setiap kolom.
-  2. Tujuan: Untuk memahami jenis data yang ada (misalnya, numerik, kategori) serta memeriksa adanya nilai yang hilang (missing values). Ini penting untuk merencanakan langkah-langkah pembersihan data yang diperlukan.
+Untuk memuat dataset ke dalam DataFrame menggunakan pandas, menggunakan pd.read_csv() untuk membaca file CSV.
 
-
-## 4. Data Cleaning: Penanganan missing values, duplicate records, dan outliers . Pandas menyediakan metode seperti dropna(), fillna(), dan drop_duplicates() untuk data cleaning.  
+## 3. Data Cleaning: Penanganan missing values untuk data cleaning.  
 ### Kode Program:
 ```python
-# Remove rows with missing values
-movie.dropna(inplace=True)
-
-# Remove duplicate rows
-film.drop_duplicates(inplace=True)
-
-# Hndle outliers if needed
+print("\nMissing values per kolom:")
+db.isnull().sum()
 ```
 ### code:
-![image](https://github.com/user-attachments/assets/4eb93297-31fb-4428-9948-eabca4543076)
+![image](https://github.com/user-attachments/assets/b9ee5bbf-d2c2-4bb0-8ff4-1fa7551352ac)
 
 ### Penjelasan:
 - a.Menangani Missing Values
 Missing values dapat memengaruhi analisis dan hasil model. Oleh karenanya perlu dilakukan penghapusan baris dengan menggunakan missing value
 - b.Menghapus Duplikasi
 Duplikat dalam dataset dapat menyebabkan bias dalam analisis.
+
+## 4. Pilih kolom numerik untuk imputasi
+### Kode Program:
+```python
+# Hanya kolom numerik yang akan diimputasi dengan mean, median, modus
+numerical_cols = db.select_dtypes(include=[np.number]).columns
+
+print("\nKolom numerik yang akan diimputasi:", numerical_cols)
+```
+### code:
+![image](https://github.com/user-attachments/assets/c9a82fea-baa5-4a75-93b2-5cb9b59b2386)
+
+### Penjelasan:
+Pilih kolom numerik saja karena jika tidak kode program akan error karena ada data yang berupa string juga.
+
+## 5. Imputasi missing values pada kolom numerik saja
+### Kode Program:
+```python
+imputer_mean = SimpleImputer(strategy="mean")
+imputer_median = SimpleImputer(strategy="median")
+imputer_mode = SimpleImputer(strategy="most_frequent")
+### code:
+![image](https://github.com/user-attachments/assets/14c82708-bfbf-4f41-b571-53762d6606e6)
+### Mean:
+![image](https://github.com/user-attachments/assets/55dc8ba9-5392-4637-a85b-4d6472dd1aa1)
+
+### Median:
+![image](https://github.com/user-attachments/assets/5e27e553-7dc4-4a39-adf9-7755ccda2c9e)
+
+### Modus:
+![image](https://github.com/user-attachments/assets/d24b9a4d-ca2d-422f-ad7d-328cd2741fe6)
+
+### Penjelasan:
+kolom numerik yang teridentifikasi dalam numerical_cols diimputasi dengan nilai rata-rata menggunakan imputer_mean.fit_transform(). Setelah proses ini, data yang hilang digantikan oleh rata-rata kolom, dan hasilnya ditampilkan menggunakan db_mean.head().
+
+
+## 5. Imputasi missing values pada kolom numerik saja
+### Kode Program:
+```python
+imputer_mean = SimpleImputer(strategy="mean")
+imputer_median = SimpleImputer(strategy="median")
+imputer_mode = SimpleImputer(strategy="most_frequent")
+### code:
+### Penjelasan:
+
+
 
 # Kesimpulan
 Dari pembelajaran Preprocessing data dalam bahasa pemrograman Python adalah langkah penting yang memastikan data siap untuk analisis dan pemodelan. Proses ini melibatkan pembersihan data dari nilai hilang dan duplikasi, serta transformasi data seperti normalisasi dan encoding kategori. Python menawarkan berbagai library, seperti Pandas untuk manipulasi data dan Scikit-learn untuk teknik preprocessing, yang memudahkan kita dalam melakukan tugas ini. Dengan melakukan preprocessing yang tepat, kita dapat meningkatkan akurasi dan keandalan model machine learning. Penting untuk menyesuaikan proses ini dengan karakteristik dataset dan tujuan analisis, sehingga hasil yang diperoleh menjadi lebih optimal.
