@@ -100,6 +100,8 @@ Pilih kolom numerik saja karena jika tidak kode program akan error karena ada da
 imputer_mean = SimpleImputer(strategy="mean")
 imputer_median = SimpleImputer(strategy="median")
 imputer_mode = SimpleImputer(strategy="most_frequent")
+```
+
 ### code:
 
 ![image](https://github.com/user-attachments/assets/14c82708-bfbf-4f41-b571-53762d6606e6)
