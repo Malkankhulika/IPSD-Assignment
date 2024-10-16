@@ -75,9 +75,9 @@ db.isnull().sum()
 ![image](https://github.com/user-attachments/assets/b9ee5bbf-d2c2-4bb0-8ff4-1fa7551352ac)
 
 ### Penjelasan:
-- a.Menangani Missing Values
+- Menangani Missing Values
 Missing values dapat memengaruhi analisis dan hasil model. Oleh karenanya perlu dilakukan penghapusan baris dengan menggunakan missing value
-- b.Menghapus Duplikasi
+- Menghapus Duplikasi
 Duplikat dalam dataset dapat menyebabkan bias dalam analisis.
 
 ## 4. Pilih kolom numerik untuk imputasi
@@ -101,14 +101,19 @@ imputer_mean = SimpleImputer(strategy="mean")
 imputer_median = SimpleImputer(strategy="median")
 imputer_mode = SimpleImputer(strategy="most_frequent")
 ### code:
+
 ![image](https://github.com/user-attachments/assets/14c82708-bfbf-4f41-b571-53762d6606e6)
+
 ### Mean:
+
 ![image](https://github.com/user-attachments/assets/55dc8ba9-5392-4637-a85b-4d6472dd1aa1)
 
 ### Median:
+
 ![image](https://github.com/user-attachments/assets/5e27e553-7dc4-4a39-adf9-7755ccda2c9e)
 
 ### Modus:
+
 ![image](https://github.com/user-attachments/assets/d24b9a4d-ca2d-422f-ad7d-328cd2741fe6)
 
 ### Penjelasan:
