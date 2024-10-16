@@ -181,13 +181,94 @@ outliers_counts_db
 ### code:
 ![image](https://github.com/user-attachments/assets/5f324505-579e-42d1-ab17-88d5b8fed46a)
 
-
 ### Penjelasan:
 Pemisahan data fitur (X) dan target (y) dengan memastikan bahwa kolom target bernama "Outcome" ada dalam dataset. Jika ditemukan, fitur dipisahkan dari kolom target. Program ini adalah fungsi untuk menghitung outlier pada setiap kolom numerik menggunakan metode Interquartile Range (IQR), di mana batas bawah dan atas ditentukan untuk mengidentifikasi nilai ekstrem. Kode terakhir melakukan perulangan pada setiap kolom numerik, menghitung outlier menggunakan fungsi IQR tersebut, kemudian hasilnya disimpan dalam bentuk DataFrame untuk memudahkan visualisasi jumlah outlier di setiap kolom.
 
 
 # Kesimpulan
 Dari pembelajaran Preprocessing data dalam bahasa pemrograman Python adalah langkah penting yang memastikan data siap untuk analisis dan pemodelan. Proses ini melibatkan pembersihan data dari nilai hilang dan duplikasi, serta transformasi data seperti normalisasi dan encoding kategori. Python menawarkan berbagai library, seperti Pandas untuk manipulasi data dan Scikit-learn untuk teknik preprocessing, yang memudahkan kita dalam melakukan tugas ini. Dengan melakukan preprocessing yang tepat, kita dapat meningkatkan akurasi dan keandalan model machine learning. Penting untuk menyesuaikan proses ini dengan karakteristik dataset dan tujuan analisis, sehingga hasil yang diperoleh menjadi lebih optimal.
+
+
+## 7. Melihat distribusi kelas pada target
+### Kode Program:
+```python
+#sebelum undersampling
+print("\nDistribusi kelas sebelum undersampling:")
+y.value_counts()
+```
+### code:
+![image](https://github.com/user-attachments/assets/bf57041b-b041-42a9-8a8c-630f450d66d7)
+```python
+#setelah undersampling
+print("\nDistribusi kelas setelah undersampling:")
+pd.Series(y_resampled).value_counts()
+```
+### code:
+![image](https://github.com/user-attachments/assets/569c9efa-4615-4be4-8277-2a519759dc73)
+
+## 7. Histogram
+### Kode Program:
+```python
+db.hist(bins=20, figsize=(15, 10), layout=(3,3),
+            color="green");
+plt.suptitle("Histograms of Pima Indian Diabetes DataSet Feature",
+             fontsize=16)
+```
+### code:
+![image](https://github.com/user-attachments/assets/54d93821-25ab-48ca-b870-60025557668b)
+### Output:
+![image](https://github.com/user-attachments/assets/32d14b07-0210-409f-bf4b-2679c32a23ac)
+
+## 8. Scaling data dengan RobustScaler dan MinMaxScaler
+## Robust Scaler
+### Kode Program:
+```python
+# Robust Scaler
+scaler_robust = RobustScaler()
+X_robust_scaled = scaler_robust.fit_transform(X_resampled)
+```
+### code:
+![image](https://github.com/user-attachments/assets/6446d268-833b-46c8-bc77-e22351fe9125)
+
+## MinMax Scaler
+### Kode Program:
+```python
+# MinMax Scaler
+scaler_minmax = MinMaxScaler()
+X_minmax_scaled = scaler_minmax.fit_transform(X_resampled)
+```
+### code:
+![image](https://github.com/user-attachments/assets/2dc35caa-8d42-4a9a-b7d6-bc776e565a71)
+
+### Penjelasan:
+Scaling data bertujuan untuk menormalkan fitur sehingga berada dalam rentang atau skala tertentu.RobustScaler digunakan untuk menghilangkan pengaruh outlier dengan menskalakan data berdasarkan interquartile range (IQR), sehingga lebih tahan terhadap data ekstrem. Sedangkan, MinMaxScaler menskalakan data ke rentang antara 0 dan 1 dengan mempertimbangkan nilai minimum dan maksimum dari tiap fitur, yang berguna untuk model yang sensitif terhadap perbedaan skala antar fitur. Kedua scaler ini diterapkan pada dataset X_resampled setelah proses fit_transform.
+
+## 8. Menampilkan Data Setelah Scaling data dengan RobustScaler dan MinMaxScaler
+## Robust Scaler
+### Kode Program:
+```python
+# Tampilkan hasil scaling
+print("\nData setelah scaling dengan RobustScaler (5 baris pertama):")
+X_robust_scaled[:5]
+```
+### code:
+![image](https://github.com/user-attachments/assets/46e6768c-caa6-4afc-a6eb-7431def0d74d)
+
+### Output:
+![image](https://github.com/user-attachments/assets/9ed38c1f-fad3-468b-8dbb-ec8572e1c79d)
+
+
+## MinMax Scaler
+### Kode Program:
+```python
+print("\nData setelah scaling dengan MinMaxScaler (5 baris pertama):")
+X_minmax_scaled[:5]
+```
+### code:
+![image](https://github.com/user-attachments/assets/1a779c35-fe46-41e3-b791-d88466af46a3)
+
+### Output:
+![image](https://github.com/user-attachments/assets/61f4fa58-913d-41d2-aea6-18383fa7eebc)
 
 
 ## Referensi
