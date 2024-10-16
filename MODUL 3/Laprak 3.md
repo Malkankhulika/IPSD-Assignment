@@ -181,6 +181,7 @@ Pemisahan data fitur (X) dan target (y) dengan memastikan bahwa kolom target ber
 
 
 ## 8. Melihat distribusi kelas pada target
+## a. sebelum undersampling
 ### Kode Program:
 ```python
 #sebelum undersampling
@@ -190,6 +191,7 @@ y.value_counts()
 ### code:
 ![image](https://github.com/user-attachments/assets/bf57041b-b041-42a9-8a8c-630f450d66d7)
 
+## b. setelah undersampling
 ```python
 #setelah undersampling
 print("\nDistribusi kelas setelah undersampling:")
