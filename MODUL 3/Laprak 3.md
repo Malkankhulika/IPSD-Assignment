@@ -131,10 +131,59 @@ plt.title("Heatmap Korelasi Antar Variabel")
 plt.show()
 ```
 ### code:
-![image](https://github.com/user-attachments/assets/4d2a4353-112b-4fa2-9cc3-3511cdef8627)
+![image](https://github.com/user-attachments/assets/88f94bc5-9479-4f8c-b36d-06fc08c1e558)
 
 ### Penjelasan:
-![image](https://github.com/user-attachments/assets/d996d025-68da-4211-8542-ca3c3048c169)
+membuat heatmap yang menunjukkan korelasi antara variabel numerik dalam dataset db_mean, di mana db_mean.corr() menghitung matriks korelasi.
+
+## 6. Imbalance Handling data dengan undersampling
+### Kode Program:
+```python
+# kolom target bernama 'Outcome', sesuaikan dengan kolom target di data diabetes
+target_column = "Outcome"  # nama kolom
+if target_column in db_mean.columns:
+    X = db_mean.drop(target_column, axis=1)  # Memisahkan fitur
+    y = db_mean[target_column]  # Target
+else:
+    raise ValueError(f"Kolom '{target_column}' tidak ditemukan dalam data.")
+```
+### code:
+![image](https://github.com/user-attachments/assets/aa10c26b-2108-4100-a304-cbe06ebc0b0a)
+
+### Kode Program:
+```python
+# melihat outlier
+def count_outliers_iqr(db):
+    Q1 = db.quantile(0.25)
+    Q3 = db.quantile(0.75)
+    IQR = Q3 - Q1
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+    return ((db < lower_bound) | (db > upper_bound)).sum()
+```
+### code:
+![image](https://github.com/user-attachments/assets/ff0ac950-8548-410c-a085-6cfe2ad22abf)
+
+
+### Kode Program:
+```python
+outliers = {}
+for col in db.select_dtypes(include=['int64','float64']).columns:
+    outliers[col] = count_outliers_iqr(db[col])
+    
+#convert the result into a datafream for easier viewing
+outliers_counts_db = pd.DataFrame(list(outliers.items()), columns =['Column', 'Outlier Count'])
+
+#display the outlier counts DataFrame
+
+outliers_counts_db
+```
+### code:
+![image](https://github.com/user-attachments/assets/5f324505-579e-42d1-ab17-88d5b8fed46a)
+
+
+### Penjelasan:
+Pemisahan data fitur (X) dan target (y) dengan memastikan bahwa kolom target bernama "Outcome" ada dalam dataset. Jika ditemukan, fitur dipisahkan dari kolom target. Program ini adalah fungsi untuk menghitung outlier pada setiap kolom numerik menggunakan metode Interquartile Range (IQR), di mana batas bawah dan atas ditentukan untuk mengidentifikasi nilai ekstrem. Kode terakhir melakukan perulangan pada setiap kolom numerik, menghitung outlier menggunakan fungsi IQR tersebut, kemudian hasilnya disimpan dalam bentuk DataFrame untuk memudahkan visualisasi jumlah outlier di setiap kolom.
 
 
 # Kesimpulan
