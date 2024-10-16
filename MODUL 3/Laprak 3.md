@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/535bdb5e-4406-4ebf-9144-6a4166cc3340)<h1 align="center">Laporan Praktikum Modul EDA/Preprocessing</h1>
+<h1 align="center">Laporan Praktikum Modul EDA/Preprocessing</h1>
 <p align="center">Khulika Malkan</p>
 <p align="center">2311110057</p>
 <p align="center">S1SD04-02</p>
@@ -122,15 +122,19 @@ imputer_mode = SimpleImputer(strategy="most_frequent")
 kolom numerik yang teridentifikasi dalam numerical_cols diimputasi dengan nilai rata-rata menggunakan imputer_mean.fit_transform(). Setelah proses ini, data yang hilang digantikan oleh rata-rata kolom, dan hasilnya ditampilkan menggunakan db_mean.head().
 
 
-## 5. Imputasi missing values pada kolom numerik saja
+## 5. Cek korelasi antar variabel dengan heatmap
 ### Kode Program:
 ```python
-imputer_mean = SimpleImputer(strategy="mean")
-imputer_median = SimpleImputer(strategy="median")
-imputer_mode = SimpleImputer(strategy="most_frequent")
+plt.figure(figsize=(10, 8))
+sns.heatmap(db_mean.corr(), annot=True, cmap='coolwarm', fmt='.2f')
+plt.title("Heatmap Korelasi Antar Variabel")
+plt.show()
+```
 ### code:
-### Penjelasan:
+![image](https://github.com/user-attachments/assets/4d2a4353-112b-4fa2-9cc3-3511cdef8627)
 
+### Penjelasan:
+![image](https://github.com/user-attachments/assets/d996d025-68da-4211-8542-ca3c3048c169)
 
 
 # Kesimpulan
